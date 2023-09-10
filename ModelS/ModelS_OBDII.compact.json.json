@@ -1,0 +1,63 @@
+{
+    "busMetadata": {
+        "baudrate": 0,
+        "canFrameFormat": "base",
+        "id": 0,
+        "name": "OBDII",
+        "protocol": "can"
+    },
+    "messages": {
+        "UDS_bccenRequest": {
+            "atomicGroups": [],
+            "cycle_time": 100,
+            "length_bytes": 8,
+            "message_id": 1665,
+            "originNode": "TOOL",
+            "origin_id": 1665,
+            "role": "Normal",
+            "send_type": "IfActive",
+            "senders": [
+                "tool"
+            ],
+            "signals": {
+                "UDS_bccenRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 1,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bccenRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 1,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic100ms"
+            }
+        }
+    },
+    "product": "ModelS",
+    "version": "3.0.0"
+}

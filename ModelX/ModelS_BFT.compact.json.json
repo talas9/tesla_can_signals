@@ -1,0 +1,193 @@
+{
+    "busMetadata": {
+        "baudrate": 125000,
+        "canFrameFormat": "base",
+        "id": 3,
+        "name": "BFT",
+        "protocol": "can"
+    },
+    "messages": {
+        "UDS_msmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1740,
+            "originNode": "GTW",
+            "origin_id": 1740,
+            "role": "Normal",
+            "send_type": "IfActive",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_msmRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "MSM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_msmdRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 2018,
+            "originNode": "GTW",
+            "origin_id": 2018,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_msmdRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "MSMD"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_msmpRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 2019,
+            "originNode": "GTW",
+            "origin_id": 2019,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_msmpRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "MSMP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_ptcRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1734,
+            "originNode": "GTW",
+            "origin_id": 1734,
+            "role": "Normal",
+            "send_type": "IfActive",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_ptcRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PTC"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_rccmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1735,
+            "originNode": "GTW",
+            "origin_id": 1735,
+            "role": "Normal",
+            "send_type": "IfActive",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_rccmRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "RCCM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        }
+    },
+    "product": "ModelS",
+    "version": "3.0.0"
+}

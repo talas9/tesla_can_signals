@@ -1,0 +1,1627 @@
+{
+    "busMetadata": {
+        "baudrate": 125000,
+        "canFrameFormat": "base",
+        "id": 1,
+        "name": "BDY",
+        "protocol": "can"
+    },
+    "messages": {
+        "BCREAR_status": {
+            "atomicGroups": [],
+            "cycle_time": 100,
+            "length_bytes": 8,
+            "message_id": 514,
+            "originNode": "BCREAR",
+            "origin_id": 514,
+            "role": "Normal",
+            "send_type": "Cyclic",
+            "senders": [
+                "bcrear"
+            ],
+            "signals": {
+                "BCREAR_trailerLightDetection": {
+                    "continuous": false,
+                    "endianness": "LITTLE",
+                    "max": 3,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW",
+                        "TBX"
+                    ],
+                    "scale": 1,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 11,
+                    "units": "",
+                    "value_description": {
+                        "TRAILER_LIGHT_DETECTION_DETECTED": 2,
+                        "TRAILER_LIGHT_DETECTION_FAULT": 1,
+                        "TRAILER_LIGHT_DETECTION_NOT_DETECTED": 3,
+                        "TRAILER_LIGHT_DETECTION_SNA": 0
+                    },
+                    "value_table_name": "trailerLightDetection",
+                    "width": 2
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic100ms"
+            }
+        },
+        "BCS2C_2RowSeatHeatStatus": {
+            "atomicGroups": [],
+            "cycle_time": 500,
+            "length_bytes": 8,
+            "message_id": 812,
+            "originNode": "BCS2C",
+            "origin_id": 812,
+            "role": "Normal",
+            "send_type": "Cyclic",
+            "senders": [
+                "bcs2c"
+            ],
+            "signals": {
+                "BCS2C_2RowHeatPadCurrent": {
+                    "continuous": true,
+                    "endianness": "LITTLE",
+                    "max": 20.46,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 0.02,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 16,
+                    "units": "A",
+                    "width": 10
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic1s"
+            }
+        },
+        "BCS2L_2RowSeatHeatStatus": {
+            "atomicGroups": [],
+            "cycle_time": 500,
+            "length_bytes": 8,
+            "message_id": 811,
+            "originNode": "BCS2L",
+            "origin_id": 811,
+            "role": "Normal",
+            "send_type": "Cyclic",
+            "senders": [
+                "bcs2l"
+            ],
+            "signals": {
+                "BCS2L_2RowHeatPadCurrent": {
+                    "continuous": true,
+                    "endianness": "LITTLE",
+                    "max": 20.46,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 0.02,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 16,
+                    "units": "A",
+                    "width": 10
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic1s"
+            }
+        },
+        "BCS2L_3RowSeatHeatStatus": {
+            "atomicGroups": [],
+            "cycle_time": 500,
+            "length_bytes": 8,
+            "message_id": 827,
+            "originNode": "BCS2L",
+            "origin_id": 827,
+            "role": "Normal",
+            "send_type": "Cyclic",
+            "senders": [
+                "bcs2l"
+            ],
+            "signals": {
+                "BCS2L_3RowHeatPadCurrent": {
+                    "continuous": true,
+                    "endianness": "LITTLE",
+                    "max": 20.46,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 0.02,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 16,
+                    "units": "A",
+                    "width": 10
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic1s"
+            }
+        },
+        "BCS2R_2RowSeatHeatStatus": {
+            "atomicGroups": [],
+            "cycle_time": 500,
+            "length_bytes": 8,
+            "message_id": 813,
+            "originNode": "BCS2R",
+            "origin_id": 813,
+            "role": "Normal",
+            "send_type": "Cyclic",
+            "senders": [
+                "bcs2r"
+            ],
+            "signals": {
+                "BCS2R_2RowHeatPadCurrent": {
+                    "continuous": true,
+                    "endianness": "LITTLE",
+                    "max": 20.46,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 0.02,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 16,
+                    "units": "A",
+                    "width": 10
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic1s"
+            }
+        },
+        "BCS2R_3RowSeatHeatStatus": {
+            "atomicGroups": [],
+            "cycle_time": 500,
+            "length_bytes": 8,
+            "message_id": 829,
+            "originNode": "BCS2R",
+            "origin_id": 829,
+            "role": "Normal",
+            "send_type": "Cyclic",
+            "senders": [
+                "bcs2r"
+            ],
+            "signals": {
+                "BCS2R_3RowHeatPadCurrent": {
+                    "continuous": true,
+                    "endianness": "LITTLE",
+                    "max": 20.46,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "GTW"
+                    ],
+                    "scale": 0.02,
+                    "send_type": "Cyclic",
+                    "signedness": "UNSIGNED",
+                    "start_position": 16,
+                    "units": "A",
+                    "width": 10
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Cyclic1s"
+            }
+        },
+        "GTW_driverHandleRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 296,
+            "originNode": "GTW",
+            "origin_id": 296,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw"
+            ],
+            "signals": {
+                "GTW_driverHandleReqB0": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB1": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 15,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB2": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 23,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB3": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 31,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB4": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB5": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 47,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB6": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 55,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_driverHandleReqB7": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 63,
+                    "units": "",
+                    "width": 8
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "GTW_passengerHandleRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 312,
+            "originNode": "GTW",
+            "origin_id": 312,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw"
+            ],
+            "signals": {
+                "GTW_passengerHandleReqB0": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB1": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 15,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB2": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 23,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB3": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 31,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB4": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB5": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 47,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB6": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 55,
+                    "units": "",
+                    "width": 8
+                },
+                "GTW_passengerHandleReqB7": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 255,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "NoSigSendType",
+                    "signedness": "UNSIGNED",
+                    "start_position": 63,
+                    "units": "",
+                    "width": 8
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bccenRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1665,
+            "originNode": "GTW",
+            "origin_id": 1665,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bccenRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCCEN"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bccenRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCCEN"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcfalcdRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1710,
+            "originNode": "GTW",
+            "origin_id": 1710,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcfalcdRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcfalcdRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcfalcpRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1706,
+            "originNode": "GTW",
+            "origin_id": 1706,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcfalcpRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcfalcpRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcfdmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1700,
+            "originNode": "GTW",
+            "origin_id": 1700,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcfdmRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcfdmRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcfpmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1701,
+            "originNode": "GTW",
+            "origin_id": 1701,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcfpmRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFPM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcfpmRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFPM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcfrontRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1699,
+            "originNode": "GTW",
+            "origin_id": 1699,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcfrontRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFRONT"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcfrontRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFRONT"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcrdmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1702,
+            "originNode": "GTW",
+            "origin_id": 1702,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcrdmRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCRDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcrdmRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCRDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcrearRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1698,
+            "originNode": "GTW",
+            "origin_id": 1698,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcrearRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCREAR"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcrearRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCREAR"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcrpmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1703,
+            "originNode": "GTW",
+            "origin_id": 1703,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcrpmRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCRPM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcrpmRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCRPM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcs2cRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1708,
+            "originNode": "GTW",
+            "origin_id": 1708,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcs2cRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCS2C"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcs2cRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCS2C"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcs2lRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1707,
+            "originNode": "GTW",
+            "origin_id": 1707,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcs2lRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCS2L"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcs2lRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCS2L"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bcs2rRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1709,
+            "originNode": "GTW",
+            "origin_id": 1709,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_bcs2rRequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCS2R"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_bcs2rRequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCS2R"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_bdyRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1668,
+            "originNode": "GTW",
+            "origin_id": 1668,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_bdyRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BDY"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_ddmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1674,
+            "originNode": "GTW",
+            "origin_id": 1674,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_ddmRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "DDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_efuseRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1729,
+            "originNode": "GTW",
+            "origin_id": 1729,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw"
+            ],
+            "signals": {
+                "UDS_efuseRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 18446744073709551615,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "EFUSE"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_lftRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1677,
+            "originNode": "GTW",
+            "origin_id": 1677,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_lftRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "LFT"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_pdmRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1673,
+            "originNode": "GTW",
+            "origin_id": 1673,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_pdmRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "PDM"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_secRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1667,
+            "originNode": "GTW",
+            "origin_id": 1667,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_secRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "SEC"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_snscll1Request": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1768,
+            "originNode": "GTW",
+            "origin_id": 1768,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_snscll1RequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_snscll1RequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_snsclr1Request": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1769,
+            "originNode": "GTW",
+            "origin_id": 1769,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_snsclr1RequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_snsclr1RequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_snscul1Request": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1773,
+            "originNode": "GTW",
+            "origin_id": 1773,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_snscul1RequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_snscul1RequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_snscur1Request": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1775,
+            "originNode": "GTW",
+            "origin_id": 1775,
+            "role": "Normal",
+            "send_type": "NotUsed1",
+            "senders": [
+                "gtw",
+                "gtwu"
+            ],
+            "signals": {
+                "UDS_snscur1RequestData_H": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 32
+                },
+                "UDS_snscur1RequestData_L": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "BCFALCD",
+                        "BCFALCP"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 39,
+                    "units": "",
+                    "width": 32
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_sunRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1678,
+            "originNode": "GTW",
+            "origin_id": 1678,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_sunRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "SUN"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        },
+        "UDS_tunerRequest": {
+            "atomicGroups": [],
+            "cycle_time": 0,
+            "length_bytes": 8,
+            "message_id": 1679,
+            "originNode": "GTW",
+            "origin_id": 1679,
+            "role": "Normal",
+            "send_type": "NoMsgSendType",
+            "senders": [
+                "gtw",
+                "gtwu",
+                "tool"
+            ],
+            "signals": {
+                "UDS_tunerRequestData": {
+                    "continuous": false,
+                    "endianness": "BIG",
+                    "max": 0,
+                    "min": 0,
+                    "offset": 0,
+                    "receivers": [
+                        "TUNER"
+                    ],
+                    "scale": 1,
+                    "send_type": "OnWrite",
+                    "signedness": "UNSIGNED",
+                    "start_position": 7,
+                    "units": "",
+                    "width": 64
+                }
+            },
+            "transmitConditions": {
+                "messagePriority": "Asynchronous"
+            }
+        }
+    },
+    "product": "ModelS",
+    "version": "3.0.0"
+}

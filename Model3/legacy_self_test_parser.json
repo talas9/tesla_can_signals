@@ -1,0 +1,1290 @@
+{
+  "P2_armrest": {
+    "metric_name": {
+      "ARMREST_LATCH_CURRENT": "Rear armrest console latch is faulted or disconnected.",
+      "ARMREST_LATCH_HALL_SENSOR": "Rear armrest console latch sensor is faulted or disconnected.",
+      "ARMREST_SWITCH": "Rear armrest console switch is faulted or disconnected.",
+      "FOLD_LATCH_CURRENT": "Rear armrest console fold latch is faulted or disconnected.",
+      "FOLD_LATCH_HALL_SENSOR": "Rear armrest console fold latch sensor is faulted or disconnected.",
+      "FOLD_SWITCH": "Rear armrest console fold switch is faulted or disconnected.",
+      "INDUCTIVE_CHARGER_LIN": "Rear armest inductive charger failed to communicate. Check LIN wires.",
+      "INDUCTIVE_CHARGER_POWER": "Rear armrest inductive charger failed to provide power. Check power connection."
+    },
+    "postfix": "Ensure VCLEFT update passed. Check connection to component and retry. If issue persists, replace part.",
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFT_2R_P2-MS-RECLINE-ARMREST-CONSOLE"
+    ]
+  },
+  "P2_cushion": {
+    "metric_name": {
+      "REAR_CENTER_SEAT_HEAT_CUSHION_CURRENT": "Rear center seat heat cushion failed to turn on.",
+      "REAR_CENTER_SEAT_HEAT_THERMISTOR": "Rear center thermistor is faulted or disconnected.",
+      "REAR_LEFT_SEAT_HEAT_CUSHION_CURRENT": "Rear left seat heat cushion failed to turn on.",
+      "REAR_LEFT_SEAT_HEAT_THERMISTOR": "Rear left thermistor is faulted or disconnected.",
+      "REAR_RIGHT_SEAT_HEAT_CUSHION_CURRENT": "Rear right seat heat cushion failed to turn on.",
+      "REAR_RIGHT_SEAT_HEAT_THERMISTOR": "Rear right thermistor is faulted or disconnected."
+    },
+    "metric_value": {
+      "NOT_RUNNING_NEVER_STARTED": "Test could not be started. Retry."
+    },
+    "postfix": "Ensure VCRIGHT update passed. Check connection to seat component and retry. If issue persists, replace part.",
+    "tasks": [
+      "RUN - TEST-SELF_VCRIGHT_2R_P2-MS-CUSHION-HEATER"
+    ]
+  },
+  "P2_occupancy": {
+    "metric_name": {
+      "CENTER_OCCUPANCY_SWITCH": "rear center seat,",
+      "LEFT_OCCUPANCY_SWITCH": "rear left seat,",
+      "RIGHT_OCCUPANCY_SWITCH": "rear right seat,"
+    },
+    "postfix": "Ensure VCLEFT update passed. Check connection to occupancy switch and retry. If problem persists, replace switch.",
+    "prefix": "The following occupancy switch(es) are faulted or disconnected:",
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFT_2R_P2-MS-OCCUPANCY"
+    ]
+  },
+  "P2_ocs": {
+    "metric_name": {
+      "IEE_OCS_CURRENT": "Front passenger seat occupancy system is faulted or disconnected. Check connector.",
+      "IEE_OCS_LIN": "Front passenger seat occupancy system cannot communicate. Check LIN connection."
+    },
+    "postfix": "Ensure VCRIGHT update passed.",
+    "tasks": [
+      "RUN - TEST-SELF_VCRIGHT_FRONT_P2-OCS"
+    ]
+  },
+  "P2_seat_buckles": {
+    "metric_name": {
+      "CENTER_BUCKLE_SWITCH": "Rear center buckle switch is faulted or disconnected.",
+      "RIGHT_BUCKLE_SWITCH": "Rear right buckle switch is faulted or disconnected."
+    },
+    "postfix": "Ensure VCRIGHT update passed. Check connection to buckle and retry. If issue persists, replace part.",
+    "tasks": [
+      "RUN - TEST-SELF_VCRIGHT_2R_P2-MS-C-BUCKLE",
+      "RUN - TEST-SELF_VCRIGHT_2R_P2-MS-R-BUCKLE"
+    ]
+  },
+  "application_state": {
+    "metric_value": {
+      "Timed out waiting for ECU to enter desired APPLICATION state": "Timed out waiting for ECU to enter desired APPLICATION state. Make sure that the module is powered and is communicating correctly, once verified, retry."
+    },
+    "tasks": [
+      "RUN - PROC_EPBR_CLEAR-BRAKE-HW-TYPE",
+      "RUN - PROC_VCFRONT_X_START-THERMAL-FILL-DRAIN",
+      "RUN - PROC_VCFRONT_X_START-THERMAL-FILL-DRAIN-COOLANT",
+      "RUN - PROC_VCFRONT_X_START-THERMAL-FILL-DRAIN-REFRIGERANT",
+      "RUN - TEST_VCFRONT_X_THERMAL-COOLANT-AIR-PURGE-START",
+      "RUN - TEST-SELF_VCFRONT_X_THERMAL-HV-PACK-HOT-SEAL-START",
+      "RUN - TEST-SELF_VCFRONT_X_THERMAL-HV-PACK-HOT-SEAL-STOP"
+    ]
+  },
+  "autopilot": {
+    "metric_name": {
+      "CH_CAN_STATUS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port.",
+      "PARK_CAN_STATUS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port.",
+      "PARTY_CAN_STATUS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port.",
+      "PRIMARY_RADAR_CAN_STATUS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port.",
+      "SECONDARY_RADAR_CAN_STATUS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port.",
+      "SELF_TEST_CAN_COMMS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port.",
+      "VEHICLE_CAN_STATUS": "Check the CAN connection to the Autopilot Board the Vehicle through the Chassis CAN port."
+    },
+    "metric_value": {
+      "GPS antenna NOT detected!": "GPS Antenna not detected, Check the harness that goes to the Autopilot Board of the car computer.",
+      "Request Timed Out": "APS did not respond in time. Ensure APS connection is properly seated and powered and try again.",
+      "TimeoutBs: This value is issued to the service user when the timer N_Bs has passed its time-out value N_Bsmax(1.5); it can be issued to the service user on the sender side only.": "ECU Timeout: Check connection and power to Autopilot Board.",
+      "verbose_status": "Test failed with {value}, retry."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_APS_X_GPS-COMMS",
+      "RUN - TEST-SELF_APS_X_CAN-COMMS"
+    ]
+  },
+  "autopilot_heater": {
+    "metric_name": {
+      "AP_HEATER_POWER": "Autopilot windshield heater is faulted or disconnected."
+    },
+    "postfix": "Ensure VCRIGHT update passed. Check connection to component and retry. If issue persists, replace part.",
+    "tasks": [
+      "RUN - TEST-SELF_VCRIGHT_X_AP-HEATER"
+    ]
+  },
+  "brake_stiffness": {
+    "metric_name": {
+      "PRESSURE_P100": "Pressure inconsistent with expected values. Pressure P100 was {metadata[FormattedResults][PRESSURE_P100]} and pressure P200 was {metadata[FormattedResults][PRESSURE_P200]}. P100 is expected to be between {low_limit} and {high_limit}. If the pressure is too low, check brake fluid levels and perform brake bleed. If the pressure is too high, make sure there are no blockages in the brake circuit. If P100-P200 > 4, there's a leak, or air in the brake circuit."
+    },
+    "tasks": [
+      "TEST_BRAKE_X_STIFFNESS-TEST-PRESSURE-BURNISHED"
+    ]
+  },
+  "chargeport_door_connectivity": {
+    "metric_name": {
+      "CLOSE_MOTOR_FAILED": "Detected problem with charge port motor.",
+      "INDUCTIVE_SENSOR_FAILED": "Detected problem with charge port door inductive sensor.",
+      "LEDS_FAILED": "Detected problem with charge port LED.",
+      "OPEN_MOTOR_FAILED": "Detected problem with charge port motor.",
+      "POTENTIOMETER_FAILED": "Detected problem with charge port door potentiometer.",
+      "PRESENCE_SENSOR_FAILED": "Detected with charge port door presence sensor (inductive sensor for Model 3/Y)."
+    },
+    "postfix": "Ensure that charge port door harness is plugged into, for 3/Y, the charge port ECU (3/Y), or for S/X, the inlet and that the inlet harness is connected to charge port ECU. If issue cannot be found, replace CP door assembly. If issue persists, replace CP ECU.",
+    "tasks": [
+      "RUN - TEST-SELF_CP_X_DOOR_CONNECTIVITY"
+    ]
+  },
+  "chargeport_door_performance": {
+    "metric_name": {
+      "DOOR_BUTTON_FAILED": "Charge port door button was pressed during test.",
+      "DOOR_CINCH_FAILED": "Charge port door unable to cinch closed before test.",
+      "DOOR_CINCH_POSITION_FAILED": "Charge port door potentiometer unable to confirm door is closed.",
+      "DOOR_CINCH_PRESENCE_FAILED": "Charge port door inductive sensor unable to confirm door is closed.",
+      "DOOR_CLOSE_FAILED": "Charge port door unable to close fully.",
+      "DOOR_CLOSE_POSITION_FAILED": "Charge port door potentiometer unable to confirm door is closing.",
+      "DOOR_CLOSE_PRESENCE_FAILED": "Charge port door inductive sensor unable to confirm door is closed.",
+      "DOOR_OPEN_FAILED": "Charge port door unable to open fully.",
+      "DOOR_OPEN_POSITION_FAILED": "Charge port door potentiometer unable to confirm door is open.",
+      "DOOR_OPEN_PRESENCE_FAILED": "Charge port door inductive sensor unable to confirm door is open."
+    },
+    "postfix": "Ensure that nothing is obstructing the door from closing.  Ensure that charge port door harness is plugged into, for 3/Y, the charge port ECU (3/Y), or for S/X, the inlet and that the inlet harness is connected to charge port ECU. If issue cannot be found, replace CP door assembly. If issue persists, replace CP ECU.",
+    "tasks": [
+      "RUN - TEST-SELF_CP_X_DOOR_PERFORMANCE"
+    ]
+  },
+  "chargeport_evse_sensing": {
+    "metric_name": {
+      "PILOT_FAILED": "Charge port unable to detect valid pilot signal.",
+      "PROXIMITY_FAILED": "Charge port unable to detect valid proximity signal.",
+      "START_RETURN_CODE": "Routine failed to start."
+    },
+    "postfix": "Ensure charging equipment is powered and not faulted (look for green LEDs on charging equipment). Ensure that charge cable is fully plugged in. Ensure that charge port inlet harness is connected to charge port ECU. If issue persists, replace charge port HV harness. If issue still persists, replace charge port ECU.",
+    "tasks": [
+      "RUN - TEST-SELF_CP_X_EVSE-SENSING"
+    ]
+  },
+  "chargeport_hv_harness": {
+    "metric_name": {
+      "HV_COVER_FAILED": "HV cover failed. Ensure that charge port high voltage cover is installed and seated properly.",
+      "LATCH_FAILED": "Latch failed, ensure that latch connector is plugged in, latch is not blocked from actuating, and manual latch release is not impeded.",
+      "PIN_TEMP_SENSOR_1_FAILED": "Pin temperature sensor 1 failed. Ensure that charge port inlet harness is connected to ECU and inlet.",
+      "PIN_TEMP_SENSOR_2_FAILED": "Pin temperature sensor 2 failed. Ensure that charge port inlet harness is connected to ECU and inlet.",
+      "PIN_TEMP_SENSOR_3_FAILED": "Pin temperature sensor 3 failed. Ensure that charge port inlet harness is connected to ECU and inlet."
+    },
+    "postfix": "If issue persists, replace charge port inlet assembly. If issue still persists, replace charge port ECU.",
+    "tasks": [
+      "RUN - TEST-SELF_CP_X_HV_HARNESS"
+    ]
+  },
+  "chargeport_hv_interlock_parser": {
+    "metric_name": {
+      "CP_FAULT_LINE_FAILURE": "CP Fault Hard Line failed to latch. Check line is connected and try again.",
+      "CP_LATCH_EN_LINE_FAILURE": "CP Latch Enable Line failed to latch. Check line is connected and try again.",
+      "HV_CABLE_FAILURE": "HV busbar cover interlock on the battery pack is open circuit. Check that that cover is installed correctly/bolted down appropriately."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_HVP_X_CP-INTERLOCK",
+      "RUN - TEST-SELF_HVP_X_CP-INTERFACE"
+    ]
+  },
+  "chargeport_uhf": {
+    "metric_name": {
+      "UHF_FAILED": "Check if the UHF transmitter is powered and if the UHF transmitter is positioned correctly."
+    },
+    "metric_value": {
+      "FAILED_ALREADY_RUNNING": "The start routine failed because the UHF test is already running.",
+      "FAILED_BAD_CONDITIONS": "The start routine failed because there is a charge cable detected. Unplug cable and try again."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_CP_X_UHF"
+    ]
+  },
+  "digital_mic_test": {
+    "exit_code": {
+      "0": "Unknown Failure - Reboot the car and run the test with doors and windows closed. Escalate to Engineering if this happens again",
+      "1": "This test was run twice at the same time. Reboot the car and run the test with doors and windows closed.",
+      "2": "Audio System not supported - Run the test once again, if it keeps failing for this reason contact Engineering",
+      "3": "Usage check - Something is wrong with the odin test - it is using the incorrect parameters. Escalate to Engineering",
+      "4": "Audio system not responding - Reboot the car and run the test with doors and windows closed",
+      "5": "Dead Mic found - Please replace the OHC on this car, because one or more microphones are not working",
+      "6": "Microphone Quiet - One or more of the microphones are quite. Please close all doors and windows and run the test again. If it keeps failing for this reason - please replace OHC",
+      "7": "Diagnostic data missing - Reboot the car and run the test with doors and windows closed.",
+      "8": "Audio system not pumping - Reboot the car and run the test with doors and windows closed.",
+      "11": "Premium audio needs two a2b-nodes to be discovered. This car has Premium audio - Two areas to check: Overhead console to Car Computer and Premium amplifier. Please check the overhead console connection path to the Car Computer and ensure the harness is not at fault. If the harness is not at fault the issue might be with the amplifier on the Car Computer To check if car computer is powering the A2B bus see if the center console USB ports can charge a phone or power a 5V device. Also check the Premium amplifier is connected correctly and functioning normally. Check the grounding on the Amp. Make sure this test has failed on repeated tries before doing work.",
+      "12": "Base Audio - single single a2b-node not discovered. This car has Base audio - So check that the Car Computer is detecting the overhead console. Please check the overhead console connection path to the Car Computer and ensure the harness is not at fault. If the harness is not at fault the issue might be with the amplifier on the Car Computer. To check if car computer is powering the A2B bus see if the center console USB ports can charge a phone or power a 5V device. Make sure this test has failed on repeated tries before doing work.",
+      "14": "Duplicate data on microphones - Reboot the car and run the test once more and if the failure is still happening replace the OHC and give part to Engineering."
+    },
+    "tasks": [
+      "RUN - TEST_DIGITAL-MICS_X_FUNCTIONAL-CHECK"
+    ]
+  },
+  "digital_mic_test_telephony": {
+    "exit_code": {
+      "0": "Unknown Failure - Reboot the car and run the test with doors and windows closed. Escalate to Engineering if this happens again",
+      "1": "This test was run twice at the same time. Reboot the car and run the test with doors and windows closed.",
+      "2": "Audio System not supported - Run the test once again, if it keeps failing for this reason contact Engineering",
+      "3": "Usage check - Something is wrong with the odin test - it is using the incorrect parameters. Escalate to Engineering",
+      "4": "Audio system not responding - Reboot the car and run the test again with doors and windows closed",
+      "5": "Premium audio needs two a2b-nodes to be discovered. This car has Premium audio - Two areas to check: Overhead console to Car Computer and Premium amplifier. Please check the overhead console connection path to the Car Computer and ensure the harness is not at fault. If the harness is not at fault the issue might be with the amplifier on the Car Computer To check if car computer is powering the A2B bus see if the center console USB ports can charge a phone or power a 5V device. Also check the Premium amplifier is connected correctly and functioning normally. Check the grounding on the Amp. Make sure this test has failed on repeated tries before doing work.",
+      "6": "Dead Mic found - Please replace the OHC on this car, because one or more microphones are not working",
+      "7": "Microphone Quiet - One or more of the microphones are quite. Please close all doors and windows and run the test again. If it keeps failing for this reason - please replace OHC",
+      "8": "Duplicate data on microphones - Reboot the car and run the test once more and if the failure is still happening replace the OHC and give part to Engineering.",
+      "11": "Unable to acquire valid speaker data - The ADSP will need to be rebooted or the whole MCU might need a reboot before running the test again. Escalate to Engineering if this keeps happening.",
+      "87": "Failed to functions. Something is wrong with firmware. Escalate to Engineering."
+    },
+    "metric_value": {
+      "Unknown Node": "The ADSP is reporting incorrect diagnoistic data, please restart the car computer and re-run this test. If it keeps reporting 'Unknown Node' - please escalate to Engineering."
+    },
+    "tasks": [
+      "RUN - TEST_TELEPHONY-MICS_X_FUNCTIONAL-CHECK"
+    ]
+  },
+  "ecall": {
+    "exit_code": {
+      "16": "RCM ENS2 signal not detected. Check ENS2 connection from MCU to RCM.",
+      "17": "LTE antenna not detected. Check connection from MCU to LTE antenna.",
+      "18": "Modem SIM card not detected.",
+      "19": "IP speakers not detected. Check connection from MCU to IP speakers.",
+      "20": "Microphone not detected. Check connection from MCU to microphone.",
+      "21": "GPS antenna not detected. Check connection from MCU to GPS antenna.",
+      "54": "Couldnt connect to Modem. Reset MCU and retry. If issue persists, escalate to engineering.",
+      "55": "ECall application error. Reset MCU and retry. If issue persists, escalate to engineering.",
+      "56": "Didnt receive ADSP selftest results. Reset MCU and retry. If issue persists, escalate to engineering."
+    },
+    "metric_value": {
+      "TimeoutError()": "ECall test timed out. ECall may not be enabled on modem."
+    },
+    "tasks": [
+      "RUN - PING-BASH_ECALL"
+    ]
+  },
+  "emergency_speaker": {
+    "metric_name": {
+      "Request Timed Out": "Request Timed Out - Please retry."
+    },
+    "metric_value": {
+      "OPEN LOAD": "Double check the emergency-speaker and it's harness connection to the Autopilot.",
+      "Output short to board power or ground": "Fault with Autopilot board in car computer or harness. Replace board and harness.",
+      "SHORT LOAD": "Fault with Autopilot board in car computer or harness. Replace board and harness."
+    },
+    "tasks": [
+      "RUN - PING-HTTP_DAS_X_EMERGENCY-SPEAKER"
+    ]
+  },
+  "epbl_test": {
+    "metric_name": {
+      "APPLY_BLOCKED": "Retry, otherwise check the left parking brake caliper motor.",
+      "APPLY_TIMEOUT": "Check the left parking brake caliper motor.",
+      "CAN_PARTY_FAULT": "Party CAN fault. Check the VCLEFT harness.",
+      "CAN_VEH_FAULT": "Vehicle CAN fault. Check the VCLEFT harness.",
+      "ECU_FAULT": "Retry, otherwise replace VCLEFT.",
+      "HARNESS_OPEN": "Check the left parking brake caliper motor and the harness going to it.",
+      "HARNESS_SHORTED_HIGH": "Check the left parking brake caliper motor and the harness going to it.",
+      "HARNESS_SHORTED_LOW": "Check the left parking brake caliper motor and the harness going to it.",
+      "INPUTVOLTAGE_HIGH": "Check the 12V battery, e-fuse, and harness incoming to VCLEFT assembly.",
+      "INPUTVOLTAGE_LOW": "Check the 12V battery, e-fuse, and harness incoming to VCLEFT assembly.",
+      "MOTOR_FAULT": "Check the left parking brake caliper motor.",
+      "MOTOR_SHORT": "Check the left parking brake caliper motor and the harness going to it.",
+      "RELEASE_BLOCKED": "Retry, otherwise check the left parking brake caliper motor.",
+      "RELEASE_TIMEOUT": "Check the left parking brake caliper motor.",
+      "START_RESULT": "Test couldnt start because of {value}. Please retry.",
+      "STATUS": "Test couldnt start because of {value}. Please retry."
+    },
+    "tasks": [
+      "RUN - PROC_EPBL_START-FACTORY-RELEASE",
+      "RUN - PROC_EPBL_START-FACTORY-PARK",
+      "RUN - PROC_EPBL_CLEAR-BRAKE-HW-TYPE",
+      "RUN - TEST-SELF_EPBL_X_EPB3-CONNECTION"
+    ]
+  },
+  "epbr_test": {
+    "metric_name": {
+      "APPLY_BLOCKED": "Retry, otherwise check the right parking brake caliper motor.",
+      "APPLY_TIMEOUT": "Check the right parking brake caliper motor.",
+      "CAN_PARTY_FAULT": "Party CAN fault. Check the VCRIGHT harness.",
+      "CAN_VEH_FAULT": "Vehicle CAN fault. Check the VCRIGHT harness.",
+      "ECU_FAULT": "Retry, otherwise replace VCRIGHT.",
+      "HARNESS_OPEN": "Check the right parking brake caliper motor and the harness going to it.",
+      "HARNESS_SHORTED_HIGH": "Check the right parking brake caliper motor and the harness going to it.",
+      "HARNESS_SHORTED_LOW": "Check the right parking brake caliper motor and the harness going to it.",
+      "INPUTVOLTAGE_HIGH": "Check the 12V battery, e-fuse, and harness incoming to VCRIGHT assembly.",
+      "INPUTVOLTAGE_LOW": "Check the 12V battery, e-fuse, and harness incoming to VCRIGHT assembly.",
+      "MOTOR_FAULT": "Check the right parking brake caliper motor.",
+      "MOTOR_SHORT": "Check the right parking brake caliper motor and the harness going to it.",
+      "RELEASE_BLOCKED": "Retry, otherwise check the right parking brake caliper motor.",
+      "RELEASE_TIMEOUT": "Check the right parking brake caliper motor.",
+      "START_RESULT": "Test couldnt start because of {value}. Please retry.",
+      "STATUS": "Test couldnt start because of {value}. Please retry."
+    },
+    "tasks": [
+      "RUN - PROC_EPBL_START-FACTORY-RELEASE",
+      "RUN - PROC_EPBR_START-FACTORY-RELEASE",
+      "RUN - PROC_EPBL_START-FACTORY-PARK",
+      "RUN - PROC_EPBR_START-FACTORY-PARK",
+      "RUN - PROC_EPBL_CLEAR-BRAKE-HW-TYPE",
+      "RUN - PROC_EPBR_CLEAR-BRAKE-HW-TYPE",
+      "RUN - TEST-SELF_EPBL_X_EPB3-CONNECTION",
+      "RUN - TEST-SELF_EPBR_X_EPB3-CONNECTION"
+    ]
+  },
+  "gateway_safe_reboot": {
+    "prefix": "Re-run this test. If this test continues to fail, reboot the car (using a scroll wheel reset) and then re-run this test.",
+    "tasks": [
+      "RUN - PROC_ICE_X_GATEWAY-SAFE-REBOOT"
+    ]
+  },
+  "handle_calibration": {
+    "metric_name": {
+      "DOOR_HANDLE_CALIBRATE_LF": "Calibration for front left exterior door handle could not be completed.",
+      "DOOR_HANDLE_CALIBRATE_LR": "Calibration for rear left exterior door handle could not be completed.",
+      "DOOR_HANDLE_CALIBRATE_RF": "Calibration for front left exterior door handle could not be completed.",
+      "DOOR_HANDLE_CALIBRATE_RR": "Calibration for rear right exterior door handle could not be completed."
+    },
+    "metric_value": {
+      "FAILED_ALREADY_RUNNING": "Calibration routine could not start because it is already running.",
+      "NOT_RUNNING_INTERRUPTED": "Calibration routine could not start because it is already running."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFT_REAR-L_CALIBRATE-HANDLE",
+      "RUN - TEST-SELF_VCLEFT_FRONT-L_CALIBRATE-HANDLE",
+      "RUN - TEST-SELF_VCRIGHT_REAR-R_CALIBRATE-HANDLE",
+      "RUN - TEST-SELF_VCRIGHT_FRONT-R_CALIBRATE-HANDLE"
+    ]
+  },
+  "handle_genealogy": {
+    "metric_name": {
+      "DOOR_HANDLE_GENEALOGY_LF": "Genealogy for front left exterior door handle could not be learned.",
+      "DOOR_HANDLE_GENEALOGY_LR": "Genealogy for rear left exterior door handle could not be learned.",
+      "DOOR_HANDLE_GENEALOGY_RF": "Genealogy for front right exterior door handle could not be learned.",
+      "DOOR_HANDLE_GENEALOGY_RR": "Genealogy for rear right exterior door handle could not be learned."
+    },
+    "postfix": "Check connection to door handle and retry. If issue persists, replace component.",
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFT_FRONT-L_GENEALOGY-HANDLE",
+      "RUN - TEST-SELF_VCLEFT_REAR-L_GENEALOGY-HANDLE",
+      "RUN - TEST-SELF_VCRIGHT_FRONT-R_GENEALOGY-HANDLE",
+      "RUN - TEST-SELF_VCRIGHT_REAR-R_GENEALOGY-HANDLE"
+    ]
+  },
+  "hvac": {
+    "metric_name": {
+      "BLOWER_OPERATION": "The HVAC Blower failed to maintain its speed target. Check connectors. See Toolbox Article #34219 for more information.",
+      "BLOWER_TORQUE_LOW": "The blower torque measured was lower than expected, indicating low airflow. Check HVAC air pathway for obstructions, check total airflow in all HVAC airflow modes.",
+      "CABIN_DEEP_THERMISTOR": "Cabin thermistor out of range. Check connectors.",
+      "CABIN_MID_THERMISTOR": "Cabin thermistor out of range. Check connectors.",
+      "CABIN_PROBE_THERMISTOR": "Cabin thermistor out of range. Check connectors.",
+      "CENTER_CONSOLE_DUCT_ACTUATOR_CALIBRATION": "Center console duct actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "CENTER_CONSOLE_DUCT_ACTUATOR_CONNECTIVITY": "Center console duct connection test failed. Check connectors.",
+      "CHECK_CABIN_AIRCONDITIONING": "Cabin cooling performance is low. Duct outlet temperature did not meet expected values. Check airflow pathway and refrigerant system operation.",
+      "CHECK_CABIN_BLOWER": "The HVAC Blower failed to maintain its speed target. Check connectors. See Toolbox Article #34219 for more information.",
+      "CHECK_CABIN_COOLING_TEMP_DELTA": "Cabin cooling performance is low. Duct outlet temperature did not meet expected values. Check airflow pathway and refrigerant system operation.",
+      "CHECK_CABIN_HEATER_COMMS": "The PTC Heater is not communicating. Check connection, power, and ground.",
+      "CHECK_CABIN_HEATING_LOW_POWER": "Cabin heating performance is low. Duct outlet temperature did not meet expected values. Check airflow pathway and PTC heater operation.",
+      "CHECK_CABIN_HEATING_PTC_FAULT": "PTC Heater reports an internal fault. Check PTC Heater.",
+      "CHECK_CABIN_HEATING_TEMP_DELTA": "Cabin heating performance is low. Duct outlet temperature did not meet expected values. Check airflow pathway and refrigerant system operation.",
+      "CHECK_COMPRESSOR": "The refrigerant system is reporting a fault. Run the Heat Pump Thermal Performance Test or check active alerts.",
+      "CHECK_REFRIGERANT": "Refrigerant pressure low. Check refrigerant.",
+      "COMPRESSOR_OPERATION_NOT_ALLOWED": "Compressor operation is not allowed due to refrigerant system fault. Check alerts.",
+      "COOLANT_LEVEL_LOW": "Coolant level is low. Please fill coolant in the car and try again.",
+      "EVAPORATOR_THERMISTOR": "Evaporator thermistor out of range. Check connectors.",
+      "EVAP_THERMISTOR_FAULT": "Evaporator thermistor out of range. Check connectors.",
+      "HVAC_ACTUATORS_UNCALIBRATED": "Actuator is not calibrated. Run Case Actuator self test.",
+      "HVAC_ACTUATOR_INTAKE_UNCALIBRATED": "Actuator is not calibrated. Run Case Actuator self test.",
+      "HVAC_ACTUATOR_LEFT_BLEED_UNCALIBRATED": "Actuator is not calibrated. Run Case Actuator self test.",
+      "HVAC_ACTUATOR_LEFT_VANE_UNCALIBRATED": "Actuator is not calibrated. Run the Left Vane actuator self test.",
+      "HVAC_ACTUATOR_LOWER_MODE_UNCALIBRATED": "Actuator is not calibrated. Run Case Actuator self test.",
+      "HVAC_ACTUATOR_RIGHT_BLEED_UNCALIBRATED": "Actuator is not calibrated. Run Case Actuator self test.",
+      "HVAC_ACTUATOR_RIGHT_VANE_UNCALIBRATED": "Actuator is not calibrated. Run the Left Vane actuator self test.",
+      "HVAC_ACTUATOR_UPPER_MODE_UNCALIBRATED": "Actuator is not calibrated. Run Case Actuator self test.",
+      "INTAKE_ACTUATOR_CALIBRATION": "Intake actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "INTAKE_ACTUATOR_CONNECTIVITY": "Intake actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "LEFT_BLEED_ACTUATOR_CALIBRATION": "Left Bleed actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "LEFT_BLEED_ACTUATOR_CONNECTIVITY": "Left Bleed actuator connection test failed. Check connectors.",
+      "LEFT_DUCT_THERMISTOR_FAULT": "Duct thermistor out of range. Check connectors.",
+      "LEFT_PANEL_DUCT_THERMISTOR": "Duct thermistor out of range. Check connectors.",
+      "LEFT_SIDE_DUCT_THERMISTOR": "Duct thermistor out of range. Check connectors.",
+      "LEFT_VANE_ACTUATOR_CALIBRATION": "Actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "LEFT_VANE_ACTUATOR_CONNECTIVITY": "Actuator connection test failed. Check connectors.",
+      "LOWER_MODE_ACTUATOR_CALIBRATION": "Lower Mode actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "LOWER_MODE_ACTUATOR_CONNECTIVITY": "Lower Mode actuator connection test failed. Check connectors.",
+      "NO_HIGH_VOLTAGE": "High Voltage contactors are not closed. Check HV state, Retry.",
+      "POTENTIAL_LOW_REFRIGERANT": "Temperature is too high. Check refrigerant fluid levels.",
+      "REFRIGERANT_NOT_COMMISSIONED": "Heat pump commissioning routine not completed. Please rerun commissioning routine and try again",
+      "RIGHT_BLEED_ACTUATOR_CALIBRATION": "Right Bleed actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "RIGHT_BLEED_ACTUATOR_CONNECTIVITY": "Right Bleed actuator connection test failed. Check connectors.",
+      "RIGHT_DUCT_THERMISTOR_FAULT": "Duct thermistor out of range. Check connectors.",
+      "RIGHT_PANEL_DUCT_THERMISTOR": "Duct thermistor out of range. Check connectors.",
+      "RIGHT_SIDE_DUCT_THERMISTOR": "Duct thermistor out of range. Check connectors.",
+      "RIGHT_VANE_ACTUATOR_CALIBRATION": "Actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "RIGHT_VANE_ACTUATOR_CONNECTIVITY": "Actuator connection test failed. Check connectors.",
+      "STATUS": "Test failed with status {value}. Retry.",
+      "UPPER_MODE_ACTUATOR_CALIBRATION": "Upper Mode actuator calibration failed. Actuator did not meet expected range or timed out.",
+      "UPPER_MODE_ACTUATOR_CONNECTIVITY": "Upper Mode actuator connection test failed. Check connectors.",
+      "VCFRONT.SELF_TEST_POWER": "Failed to set desired power state {value}. Ensure VCFRONT, VCLEFT, VCRIGHT updates passed and try again."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFT_X_HVAC-BLOWER",
+      "RUN - TEST-SELF_VCRIGHT_X_HVAC-BLOWER",
+      "RUN - TEST-SELF_VCRIGHT_L_HVAC-VANE-ACTUATOR",
+      "RUN - TEST-SELF_VCRIGHT_R_HVAC-VANE-ACTUATOR",
+      "RUN - TEST-SELF_VCRIGHT_X_HVAC-CASE-ACTUATORS",
+      "RUN - TEST-SELF_VCRIGHT_X_HVAC-CASE-THERMISTORS",
+      "RUN - TEST-SELF_VCRIGHT_X_HVAC-CABIN-THERMISTORS",
+      "RUN - TEST-SELF_VCRIGHT_X_HVAC-PERFORMANCE",
+      "RUN - TEST-SELF_VCRIGHT_X_HEAT-PUMP-HVAC-PERFORMANCE",
+      "RUN - TEST-SELF_VCRIGHT_X_HVAC-PERFORMANCE-FACTORY-HRL"
+    ]
+  },
+  "hvp": {
+    "metric_name": {
+      "12V_POWER_FAILURE": "HVC LV voltage out of range (either less than 11V or greater than 16.5V). Check LV connections between HVC and LVBMS, then retry.",
+      "CONTACTOR_POWER_FAILURE": "Pack contactor voltage out of range (either less than 11V or greater than 16.5V). Check LV connections between HVC and VCRIGHT, then retry.",
+      "ENS_MIA": "ENS signal is missing. Check ENS connections between RCM and HVC, then retry. If issues persists, reset RCM, then retry.",
+      "HVIL_CURRENT_SOURCE_FAILURE": "Failed because the HVIL current source failed. Retry test.",
+      "HVIL_TEST_FAILURE": "HVIL test failed, but reason is unknown. Check all HVIL connectors outside the battery (FDU, RDU, ancillary, DI, compressor).",
+      "INTERNAL_OPEN_HVIL_FAILURE": "Failed because BMS internal HVIL voltage check failed. Check Front Drive Unit (FDU), Rear Drive Unit (RDU), and ancillary connectors",
+      "NO_12V_SUPPLY_FAILURE": "Failed because 12V supply is missing. Check penthouse lid connector is properly seated and check 12V supply.",
+      "PENTHOUSE_LID_OPEN_HVIL_FAILURE": "Failed because the HVIL fault is in the penthouse lid. Check penthouse lid switch fasteners.",
+      "SELF_TEST_HV_INTERLOCK": "HVIL self-test interlock failed for unknown reason. Retry.",
+      "STATUS": "Test failed with status {value}. Retry.",
+      "VCFRONT.SELF_TEST_POWER": "Contactors have not opened. Retry.",
+      "VEHICLE_NODE_HVIL_FAILURE": "Failed because the HVIL voltage is too low, Check all HVIL connectors outside the battery (FDU, RDU, ancillary, DI, compressor).",
+      "VEHICLE_OPEN_HVIL_FAILURE": "Failed because the HVIL fault is in the vehicle loop. Check LV harness between penthouse lid and drive unit(s). Check AC compressor HV input."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_HVP_X_HV-INTERLOCK",
+      "RUN - TEST-SELF_HVP_X_HV_LV-POWER",
+      "RUN - TEST-SELF_HVP_X_ENS"
+    ]
+  },
+  "hv_thermal": {
+    "metric_name": {
+      "SOC_TO_LOW": "State of Charge (SOC) Check: {value}",
+      "COOLANT_TO_LOW": "Coolant level check: {value}",
+      "NO_HV": "High Voltage check: {value}"
+    },
+    "metric_value": {
+      "NOT_RUNNING_FINISHED": "Routine has finished",
+      "NOT_RUNNING_STOP_REQUESTED": "Routine has stopped on request",
+      "NOT_RUNNING_INTERRUPTED": "Routine was interrupted",
+      "NOT_RUNNING_NEVER_STARTED": "Routine was never started",
+      "RUNNING": "Routine is still running"
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCFRONT_X_THERMAL-HV-PACK-HOT-SEAL-START",
+      "RUN - TEST-SELF_VCFRONT_X_THERMAL-HV-PACK-HOT-SEAL-STOP"
+    ]
+  },
+  "liftgate": {
+    "metric_value": {
+      "0201": "Trunk not closed. Check that the trunk is closed and re-run the test.",
+      "020a": "Trunk failed opening due to detecting an obstacle. Check that there are no obstacles present and re-run the test.",
+      "020c": "Trunk failed closing due to detecting an obstacle. Check that there are no obstacles present and re-run the test.",
+      "0212": "Trunk failed opening due to a test timeout. The liftgate was in the opening state longer than 8 seconds. Liftgate opens higher or slower than normal.",
+      "0214": "Trunk failed closing due to a test timeout. The liftgate was in the closing state longer than 8 seconds. Liftgate closes slower than normal.",
+      "0222": "Trunk failed opening. Minimum opening angle not reached - trunk did not open far enough. Hinges may be bent or damaged.",
+      "0224": "Trunk failed closing. Check to make sure seals are fully installed and nothing is blocking the liftgate, it may require body fit.",
+      "0242": "Trunk failed opening due to an unknown internal stopping condition. Power strut, latch, or connectors may be damaged.",
+      "0244": "Trunk failed closing due to an unknown internal stopping condition. Power strut, latch, or connectors may be damaged.",
+      "0282": "Trunk failed opening due to an unexpected request. Ensure that no buttons (exterior, shutface, UI) are pressed while running the test.",
+      "0284": "Trunk failed closing due to an unexpected request. Ensure that no buttons (exterior, shutface, UI) are pressed while running the test."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFT_X_LIFTGATE"
+    ]
+  },
+  "lvbms": {
+    "metric_name": {
+      "ECPA_STATE": "Check to make sure LV battery connector is fully connected and tab on top is pushed in.",
+      "LIN_COMMS": "Check LIN connections between LV battery and VCBatt.",
+      "MOS_STATE": "If LIN communication is good, ensure that contactors are closed and NO power supply/lead acid battery is connected then run MOS reconnect ODIN routine."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCBATT_X_LVBMS"
+    ]
+  },
+  "map_install_test": {
+    "exit_code": {
+      "1": "Reboot the car computer and then re-run this test. If this test continues to fail, install the correct map using garage and then re-run this test.",
+      "10": "Reboot the car computer and then re-run this test. If this test continues to fail, install the correct map using garage and then re-run this test.",
+      "2": "Reboot the car computer and then re-run this test. If this test continues to fail, install the correct map using garage and then re-run this test.",
+      "20": "Reboot the car computer and then re-run this test. If this test continues to fail, install the correct map using garage and then re-run this test.",
+      "5": "Verify the map region configuration and country code are set correctly for this car. If they are set correctly, install the correct navigation map using garage and then re-run this test.",
+      "7": "Verify the map region configuration and country code are set correctly for this car. If they are set correctly, ask the factory firmware team to update the inputs to this test for this country code."
+    },
+    "tasks": [
+      "RUN - PROC_ICE_X_INSTALL-LOCAL-NAV-MAP"
+    ]
+  },
+  "nfc_key_pairing": {
+    "exit_code": {
+      "1": "Failed to communicate to NFC reader. Ensure VCSEC has updated successfully and retry routine.",
+      "20": "NFC key cards are not detected on the reader. Please place key card wallet in correct position on reader and retry.",
+      "30": "Did not find VCSEC Token in UDS response. Ensure VCSEC is updated then retry. Then replace VCSEC and retry. If persists escalate.",
+      "36": "Cards read successfully, intermittent failure detected, retry routine.",
+      "40": "Could not communicate with Mothership remote server to get signed command to pair key. Please check car connectivity and retry. If car can be connected to remotely with toolbox and it still fails then escalate.",
+      "50": "Did not find expected field in response from Mothership remote server. Check server status and ensure vehicle is on correct network.",
+      "60": "NFC key cards were not found on whitelist after pairing. Please retry. If problem persists for more than 1 retry then escalate.",
+      "64": "Could not read cards on center console NFC reader (0/2 found). Ensure NFC key wallet is on center console reader just behind cupholders and rerun.",
+      "75": "Could not read cards on center console NFC reader (1/2 found). Ensure NFC key wallet is on center console reader just behind cupholders and rerun."
+    },
+    "tasks": [
+      "RUN - PROC_VCSEC_C_PAIR-NFC-CARD",
+      "RUN - PROC_VCSEC_C_PAIR-NFC-CARD-V2"
+    ]
+  },
+  "oil_pump_dif": {
+    "metric_value": {
+      "OIL_PUMP_CONNECTED": "Check front drive unit oil pump connections and rerun test",
+      "VCFRONT.SELF_TEST_POWER": "Failed to set desired power state for rear front unit. Check LV Power to VC and rear front Unit. Check that VC updates passed. Then try again. More info: {value}"
+    },
+    "tasks": [
+      "RUN - TEST-SELF_DIF_X_OIL-PUMP",
+      "RUN - TEST-SELF_DIS_X_OIL-PUMP"
+    ]
+  },
+  "oil_pump_dir": {
+    "metric_value": {
+      "OIL_PUMP_CONNECTED": "Check rear drive unit oil pump connections and rerun test",
+      "VCFRONT.SELF_TEST_POWER": "Failed to set desired power state for rear drive unit. Check LV Power to VC and rear drive Unit. Check that VC updates passed. Then try again. More info: {value}"
+    },
+    "tasks": [
+      "RUN - TEST-SELF_DIR_X_OIL-PUMP",
+      "RUN - TEST-SELF_DI_X_OIL-PUMP"
+    ]
+  },
+  "park_uss": {
+    "exit_code": {
+      "10": "Check the CAN connection to the PARK ECU from the vehicle through the Chassis CAN port."
+    },
+    "metric_name": {
+      "Request Timed Out": "Timeout for {value}: Check connection and power to PARK ECU. Retry.",
+      "SENSOR_10_LIN_CONNECTION": "Ensure that ultrasonic sensor 10 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_11_LIN_CONNECTION": "Ensure that ultrasonic sensor 11 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_12_LIN_CONNECTION": "Ensure that ultrasonic sensor 12 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_1_LIN_CONNECTION": "Ensure that ultrasonic sensor 1 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_2_LIN_CONNECTION": "Ensure that ultrasonic sensor 2 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_3_LIN_CONNECTION": "Ensure that ultrasonic sensor 3 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_4_LIN_CONNECTION": "Ensure that ultrasonic sensor 4 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_5_LIN_CONNECTION": "Ensure that ultrasonic sensor 5 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_6_LIN_CONNECTION": "Ensure that ultrasonic sensor 6 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_7_LIN_CONNECTION": "Ensure that ultrasonic sensor 7 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_8_LIN_CONNECTION": "Ensure that ultrasonic sensor 8 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "SENSOR_9_LIN_CONNECTION": "Ensure that ultrasonic sensor 9 is properly mounted and the harness to the PARK ECU is locked.  If so, ensure that the sensor isn't physically damaged.",
+      "VCFRONT.SELF_TEST_POWER": "ECU Timeout: Check connection and power to RADC"
+    },
+    "tasks": [
+      "RUN - TEST-SELF_PARK_REAR_FASCIA-USS",
+      "RUN - TEST-SELF_PARK_FRONT_FASCIA-USS",
+      "RUN - TEST-SELF_PARK_X_CAN-USS",
+      "RUN - TEST-SELF_PARK_X_CAN-TESLA-USS"
+    ]
+  },
+  "ping_bash_ant": {
+    "exit_code": {
+      "1": "Timeout Error. Ensure power connection to antenna",
+      "16": "Primary antenna is open, check the connection."
+    },
+    "tasks": [
+      "RUN - PING-BASH_ANT"
+    ]
+  },
+  "ping_bash_bt_wifi": {
+    "metric_value": {
+      "FAIL: Bluetooth antenna open": "The Bluetooth Antenna is opened.  Check connection and ensure there is no external obstruction.",
+      "FAIL: Bluetooth antenna shorted": "The Bluetooth Antenna is shorted.  Check connection and ensure there is no external obstruction.",
+      "FAIL: WIFI antenna open": "The Wifi Antenna is opened.  Check connection and ensure there is no external obstruction.",
+      "FAIL: WIFI antenna shorted": "The Wifi Antenna is shorted.  Check connection and ensure there is no external obstruction."
+    },
+    "tasks": [
+      "RUN - PING-BASH_BT-WIFI"
+    ]
+  },
+  "ping_bash_cellcon": {
+    "exit_code": {
+      "1": "Internet is not accessible, Cellular modem taking too long.  Check the internet connection."
+    },
+    "tasks": [
+      "RUN - PING-BASH_CELLCONN"
+    ]
+  },
+  "ping_bash_display": {
+    "metric_value": {
+      "Failed to detect 0x18 Serializer (port 0)": "Failure to detect 0x18 Serializer (port 0).",
+      "Failed to detect 0x19 Serializer (port 1)": "Failure to detect 0x19 Serializer (port 1).",
+      "Failed to detect 0x24 Cypress Touch-controller": "Failure to detect 0x24 Cypress Touch-controller.",
+      "Failed to detect 0x2c DeSerializer (on Display)": "Failure to detect 0x2c DeSerializer (on Display).",
+      "Failed to detect 0x4c Temperature Sensor (on Display)": "Failure to detect 0x4c Temperature Sensor (on Display).",
+      "Failed to detect 0x50 EDID EEPROM: 0x00": "Failure to detect 0x50 EDID EEPROM: 0x00.",
+      "Failed to detect 0x54 LCD EEPROM: 0": "Failure to detect 0x54 LCD EEPROM: 0."
+    },
+    "exit_code": {
+      "127": "This is a test!"
+    },
+    "postfix": "Check the connections to each of the individual components.",
+    "tasks": [
+      "RUN - PING-BASH_DISPLAY"
+    ]
+  },
+  "ping_bash_lte": {
+    "prefix": "Unclassified/New Failure",
+    "tasks": [
+      "RUN - PING-BASH_LTE"
+    ]
+  },
+  "ping_bash_usb": {
+    "exit_code": {
+      "16": "Check if the USB hub itself is connected and powered"
+    },
+    "metric_value": {
+      "OdinException: Could not get vehicle power state": "OdinException: Could not get vehicle power state.  Check connection and power to USB"
+    },
+    "tasks": [
+      "RUN - PING-BASH_USB"
+    ]
+  },
+  "ping_http_das_cameras": {
+    "exit_code": {
+      "0": "Car computer (ICE) cannot reach the camera host device. Please check the camera is connected to the DAS and retest. If test continues to fail, please replace the camera module.",
+      "10": "Failed to capture image from camera. Retry.",
+      "20": "Cannot communicate with camera. Please check connection and power to Autopilot board and check vehicle power mode is set to ACC_PLUS (drive rail) by pressing brake pedal and retest."
+    },
+    "task_name": {
+      "BACKUP-CAMERA": "Can't ping backup camera.",
+      "FISHEYE-CAMERA": "Can't ping front fisheye camera.",
+      "INTERIOR-CAMERA": "Can't ping interior camera.",
+      "L_B-PILLAR-CAMERA": "Can't ping left b-pillar camera.",
+      "L_REPEATER-CAMERA": "Can't ping left repeater camera.",
+      "MAIN-CAMERA": "Can't ping front main camera.",
+      "NARROW-CAMERA": "Can't ping front narrow camera.",
+      "R_B-PILLAR-CAMERA": "Can't ping right b-pillar camera.",
+      "R_REPEATER-CAMERA": "Can't ping right repeater camera."
+    },
+    "tasks": [
+      "RUN - PING-HTTP_DAS_R_B-PILLAR-CAMERA",
+      "RUN - PING-HTTP_DAS_L_B-PILLAR-CAMERA",
+      "RUN - PING-HTTP_DAS_L_REPEATER-CAMERA",
+      "RUN - PING-HTTP_DAS_R_REPEATER-CAMERA",
+      "RUN - PING-HTTP_DAS_X_FISHEYE-CAMERA",
+      "RUN - PING-HTTP_DAS_X_NARROW-CAMERA",
+      "RUN - PING-HTTP_DAS_X_MAIN-CAMERA",
+      "RUN - PING-HTTP_DAS_X_INTERIOR-CAMERA",
+      "RUN - PING-HTTP_DAS_X_BACKUP-CAMERA"
+    ]
+  },
+  "power_state": {
+    "metric_name": {
+      "VCFRONT.SELF_TEST_POWER": "Could not set VCFRONT power state. Ensure VCFRONT and pertinent ECU updates passed and try again."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_APS_X_GPS-COMMS",
+      "RUN - TEST-SELF_APS_X_CAN-COMMS",
+      "RUN - TEST-SELF_CP_X_HV_HARNESS",
+      "RUN - TEST-SELF_HVP_X_CP-INTERLOCK",
+      "RUN - TEST-SELF_HVP_X_CP-INTERFACE",
+      "RUN - TEST-SELF_CP_X_UHFC",
+      "RUN - PROC_EPBL_START-FACTORY-RELEASE",
+      "RUN - PROC_EPBR_START-FACTORY-RELEASE",
+      "RUN - PROC_EPBL_START-FACTORY-PARK",
+      "RUN - PROC_EPBR_START-FACTORY-PARK",
+      "RUN - PROC_EPBL_CLEAR-BRAKE-HW-TYPE",
+      "RUN - PROC_EPBR_CLEAR-BRAKE-HW-TYPE",
+      "RUN - TEST-SELF_EPBL_X_EPB3-CONNECTION",
+      "RUN - TEST-SELF_EPBR_X_EPB3-CONNECTION",
+      "RUN - TEST-SELF_VCLEFT_X_LIFTGATE",
+      "RUN - PROC_USM_FRONT_PROGRAM-USS-ADDRESSES",
+      "RUN - PROC_USM_REAR_PROGRAM-USS-ADDRESSES"
+    ]
+  },
+  "pt_thermal": {
+    "metric_name": {
+      "AMBIENT_TEMP_SENSOR": "The ambient temperature sensor value went out of range during the test. Check connectors.",
+      "BATTERY_PUMP_2PP_TEST_FAILED": "Two pole pairs test failed for battery pump",
+      "BATTERY_PUMP_3PP_TEST_FAILED": "Three pole pairs test failed for battery pump",
+      "BATT_PUMP_FAULT": "The battery coolant pump failed to maintain its speed target. Check connectors, retry.",
+      "CALIBRATION_INCOMPLETE": "5 way valve calibration did not complete successfully. Check self test results or alerts, retry.",
+      "CCL_EXV_MOTOR_CALIBRATION_TEST": "The electronic expansion valve operating range was lower than expected. Check connectors, check valve.",
+      "CCL_EXV_MOTOR_CONNECTION_TEST": "The electronic expansion valve channel is faulted. Check connectors.",
+      "CCR_EXV_MOTOR_CALIBRATION_TEST": "The electronic expansion valve operating range was lower than expected. Check connectors, check valve.",
+      "CCR_EXV_MOTOR_CONNECTION_TEST": "The electronic expansion valve channel is faulted. Check connectors.",
+      "CHILLER_COMPRESSOR_OPERATION": "The compressor state is faulted. Check for compressor alerts.",
+      "CHILLER_ENERGY_BALANCE": "The measured energy transfer between the coolant and refrigerant in the chiller was out of the expected range. Check coolant flow, check refrigerant system performance.",
+      "CHILLER_EXV": "The chiller EXV motor driver state was not READY, stepper motor driver fault occurred during the test. Check connectors, check harness, check alerts.",
+      "CHILLER_EXV_MOTOR_CALIBRATION_TEST": "The electronic expansion valve operating range was lower than expected. Check connectors, check valve.",
+      "CHILLER_EXV_MOTOR_CONNECTION_TEST": "The electronic expansion valve channel is faulted. Check connectors.",
+      "CHILLER_REFRIGERANT_DISCHARGE_PRESSURE_HIGH": "Refrigerant discharge pressure was too high. Check airflow over condenser, check radiator fan performance, check louver position.",
+      "CHILLER_REFRIGERANT_DISCHARGE_TEMP_HIGH": "Refrigerant discharge temperature was too high. Check airflow over condenser, check radiator fan performance, check louver position.",
+      "COMPRESSOR_FAULT": "The refrigerant compressor is faulted. Check alert data.",
+      "COMPRESSOR_NOT_RUNNING": "The refrigerant compressor did not maintain its target speed. Check connectors, check alert data.",
+      "CONDENSER_ENERGY_BALANCE": "The measured energy transfer between the coolant and refrigerant in the liquid cooled condenser was out of the expected range. Check coolant flow, check refrigerant system performance.",
+      "COOLANT_LEVEL_LOW": "The coolant level was detected to be low after the coolant pumps reached target speed. Check coolant level, check connectors.",
+      "COOLANT_LOW": "Coolant level was detect to be low. Check coolant level sensor, check if coolant level is genuinely low and refill/fix leaks, retry test",
+      "COOLANT_PUMP_BAT_LOW_SPEED": "Battery coolant pump speed is less than 80% of the target speed. Check connectors.",
+      "COOLANT_PUMP_PT_LOW_SPEED": "Powertrain coolant pump speed is less than 80% of the target speed. Check connectors.",
+      "COOLANT_TEMPERATURE_TOO_HOT": "5 Way valve flow test failed due to coolant being too hot or coolant temperature sensors out of range. Check PT and Battery coolant temperature sensor connectors, retry.",
+      "COOLANT_TEMP_SENSORS_SWAPPED": "The powertrain and battery coolant temperature sensors are likely swapped, check the thermal harness.",
+      "COOLANT_TEMP_SENSOR_BAT": "Battery coolant temperature sensor value went out of range during the test. Check connectors.",
+      "COOLANT_TEMP_SENSOR_PT": "Powertrain coolant temperature sensor value went out of range during the test. Check connectors.",
+      "COOLANT_VALVE_FAULT": "The coolant valve state is not ready. Check connectors.",
+      "COOLANT_VALVE_FAULTED": "The coolant valve state is not ready. Check connectors.",
+      "COOLANT_VALVE_NOT_AT_TARGET": "The coolant valve did not reach the target position. Check connector, check alert data.",
+      "DETECTION_FAILED": "Failed to detect the coolant pumps, perform a coolant air purge and retun the test.",
+      "EVAPORATOR_EXV_MOTOR_CALIBRATION_TEST": "The electronic expansion valve operating range was lower than expected. Check connectors, check valve.",
+      "EVAPORATOR_EXV_MOTOR_CONNECTION_TEST": "The electronic expansion valve channel is faulted. Check connectors.",
+      "EXV_FAULT": "One or more EXV states is not ready. Check connectors, check alert data.",
+      "EXV_FLOW_RANGE": "The refrigerant flow target through the chiller EXV was greater than expected. Check for low refrigerant charge.",
+      "FAN_FAULTED": "The radiator fan state is not ready. Check connectors.",
+      "FAN_OPERATION": "The radiator fan failed to maintain its speed target. Check connectors, retry.",
+      "FIVE_WAY_VALVE_FLOW_FAILED": "5 way valve mode desired was SERIES, actual mode detected was PARALLEL. Run 5 way valve self test.",
+      "FIVE_WAY_VALVE_POSITION": "The five way valve was not in the expected position. Run the five way valve self-test.",
+      "FLUID_LEVEL_TEST": "The coolant level was detected to be below the minimum threshold or above the maximum threshold. Check coolant level, check sensor connectors, retry.",
+      "HIGH_VOLTAGE_DOWN": "High Voltage contactors are not closed. Check HV state, Retry.",
+      "LCC_EXV_MOTOR_CALIBRATION_TEST": "The electronic expansion valve operating range was lower than expected. Check connectors, check valve.",
+      "LCC_EXV_MOTOR_CONNECTION_TEST": "The electronic expansion valve channel is faulted. Check connectors.",
+      "LCC_INLET_SOLENOID_FAULT_TEST": "The liquid cooled condenser shut of valve state is not ready. Check connectors.",
+      "LCC_SOV_FAULT": "The liquid cooled condenser shut of valve state is not ready. Check connectors.",
+      "LEFT_FAN_FAULTED": "The left fan state is not ready. Check connectors.",
+      "LOUVER_FAULTED": "Early failure: The Louver driver reported a fault. Check connectors, check for blockage or breakage, retry.",
+      "LOUVER_MOVEMENT": "Late failure: The louver failed to move as far as expected. Check connectors, check for blockage, retry.",
+      "LOUVER_NOT_AT_TARGET": "The louver was not at the full open position. Run louver self-test.",
+      "LOUVER_POSITION_CLOSED": "The louver was not at the full open position. Run louver self-test.",
+      "LOUVER_UNCALIBRATED": "Early failure: The louver was uncalibrated at the beginning of the test. Check connectors, retry, replace louver.",
+      "MOTOR_CONNECTION_TEST": "The chiller EXV motor driver state was not READY, stepper motor driver fault occurred during the test. Check connectors, check harness, check alerts.",
+      "NO_TRAVEL": "5 Way Valve calibration attempted but the valve actuator did not move. Check connectors, retry. Valve may be blocked.",
+      "OPEN_SHORT_TEST": "Thermistor resistance out of expected range. Check connectors, retry.",
+      "OPEN_SHORT_TEST_PRESSURE": "Refrigerant pressure is out of expected range. Check connectors, retry.",
+      "OPEN_SHORT_TEST_TEMPERATURE": "Refrigerant thermistor resistance out of expected range. Check connectors, retry.",
+      "OVER_TRAVEL": "The 5 way valve actuator recorded more travel than expected. Actuator gears may be stripped or actuator disconnected from valve. Check mating interface. Replace valve actuator.",
+      "POWERTRAIN_PUMP_2PP_TEST_FAILED": "Two pole pairs test failed for powertrain pump, check connectors, and retry",
+      "SELF_TEST_COOLANT_PUMPS_IDENTIFICATION": "Three pole pairs test failed for powertrain pump, check connectors and retry",
+      "PRESSURE_SENSOR_VALUES_INCOHERENT": "The difference between the minimum and maximum refrigerant pressures was greater than expected. Check sensors.",
+      "PT_PUMP_FAULT": "The powertrain coolant pump failed to maintain its speed target. Check connectors, retry.",
+      "PUMP_FAULTED": "One or more coolant pumps faulted, check connectors",
+      "PUMP_OPERATION": "The coolant pump failed to maintain its speed target. Check connectors, retry.",
+      "RADIATOR_FAN_LOW_SPEED": "The radiator fan speed is less than 80% of the target speed. Check connectors.",
+      "RADIATOR_HX_COEFFICIENT": "The radiator heat transfer coefficient was out of the expected range. Check radiator airflow.",
+      "RADIATOR_REJECTION": "The measured temperature of the powertrain coolant was higher than expected. Check radiator airflow, check radiator fan.",
+      "RECIRC_EXV_MOTOR_CALIBRATION_TEST": "The electronic expansion valve operating range was lower than expected. Check connectors, check valve.",
+      "RECIRC_EXV_MOTOR_CONNECTION_TEST": "The electronic expansion valve channel is faulted. Check connectors.",
+      "REFRIGERANT_DISCHARGE_PRESSURE_RANGE": "Low refrigerant pressure at test start. Check for low refrigerant charge.",
+      "REFRIGERANT_DISCHARGE_SENSOR": "Refrigerant discharge sensor temperature or pressure value went out of range during the test. Check connectors.",
+      "REFRIGERANT_LEVEL_LOW": "Check refrigerant charge.",
+      "REFRIGERANT_LIQUID_SENSOR": "Refrigerant liquid sensor temperature or pressure value went of range during the test. Check connectors.",
+      "REFRIGERANT_NOT_COMMISSIONED": "The Heat Pump Commissioning routine failed or was not run, the refrigerant compressor is inhibited. Run the commissioning routine.",
+      "REFRIGERANT_SUCTION_PRESSURE_RANGE": "Low refrigerant pressure at test start. Check for low refrigerant charge.",
+      "REFRIGERANT_SUCTION_SENSOR": "Refrigerant suction sensor temperature or pressure value went out of range during the test. Check connectors.",
+      "SOLENOID_FAULT_TEST": "The evaporator TXV solenoid test failed, an open circuit or short circuit was detected. Check connectors, check harness continuity, retry. Replace TXV.",
+      "STALL": "The 5 Way Valve was commanded to move, but no movement was detected. Check connectors, retry. Valve may be blocked.",
+      "START_RESULT": "UDS Routine failed to start. Make sure that no other Thermal routines are running, and retry.",
+      "STATUS": "Test failed with {value}. Retry.",
+      "UNDER_TRAVEL": "The 5 way valve actuator recorded less travel than expected. Valve may be blocked.",
+      "VALVE_NOT_READY": "Coolant valve not ready, check connector, and retry",
+      "VCFRONT.SELF_TEST_POWER": "Cannot request vehicle power state. Make sure Vehicle Controllers and Electronic Parking Brakes are updated correctly and retry.",
+      "WASTE_HEAT_UNAVAILABLE": "5 way valve flow test failed due to insufficient waste heat being available for test."
+    },
+    "tasks": [
+      "RUN - PROC_VCFRONT_X_START-THERMAL-FILL-DRAIN",
+      "RUN - PROC_VCFRONT_X_START-THERMAL-FILL-DRAIN-COOLANT",
+      "RUN - PROC_VCFRONT_X_THERMAL-FIVE-WAY-VALVE-FLOW-TEST",
+      "RUN - TEST-SELF_VCFRONT_X_ACTIVE-LOUVER",
+      "RUN - TEST-SELF_VCFRONT_X_LOUVER-CONNECTION",
+      "RUN - TEST-SELF_VCFRONT_X_AMBIENT-TEMP",
+      "RUN - TEST-SELF_VCFRONT_X_CHILLER-EXV",
+      "RUN - TEST-SELF_VCFRONT_X_COOLANT-FLUID-LEVEL",
+      "RUN - TEST-SELF_VCFRONT_X_COOLANT-PUMP-BATTERY",
+      "RUN - TEST-SELF_VCFRONT_X_COOLANT-PUMP-POWERTRAIN",
+      "RUN - TEST-SELF_VCFRONT_X_COOLANT-PUMPS-IDENTIFICATION",
+      "RUN - TEST-SELF_VCFRONT_X_COOLANT-TEMP-BATTERY",
+      "RUN - TEST-SELF_VCFRONT_X_COOLANT-TEMP-POWERTRAIN",
+      "RUN - TEST-SELF_VCFRONT_X_EVAP-SOLENOID",
+      "RUN - TEST-SELF_VCFRONT_X_EXVS",
+      "RUN - TEST-SELF_VCFRONT_X_FAN-RADIATOR-CONDENSER",
+      "RUN - TEST-SELF_VCFRONT_X_FIVE-WAY-VALVE",
+      "RUN - TEST-SELF_VCFRONT_X_HEAT-PUMP-COMMISSIONING",
+      "RUN - TEST-SELF_VCFRONT_X_HEAT-PUMP-COMMISSIONING-FACTORY-HRL",
+      "RUN - TEST-SELF_VCFRONT_X_HEAT-PUMP-THERMAL-PERFORMANCE",
+      "RUN - TEST-SELF_VCFRONT_X_HEAT-PUMP-THERMAL-PERFORMANCE-FACTORY-HRL",
+      "RUN - TEST-SELF_VCFRONT_X_THERMAL-PERFORMANCE-FACTORY-HRL",
+      "RUN - TEST-SELF_VCFRONT_X_REFRIGERANT-DISCHARGE",
+      "RUN - TEST-SELF_VCFRONT_X_REFRIGERANT-LIQUID",
+      "RUN - TEST-SELF_VCFRONT_X_REFRIGERANT-SUCTION",
+      "RUN - TEST-SELF_VCFRONT_X_SOLENOID",
+      "RUN - TEST-SELF_VCFRONT_X_THERMAL-PERFORMANCE",
+      "RUN - TEST_VCFRONT_X_THERMAL-COOLANT-AIR-PURGE-START"
+    ]
+  },
+  "radc_can": {
+    "metric_value": {
+      "OdinException": "ECU Timeout: Check connection and power to RADC.",
+      "TimeoutBs": "ECU Timeout: Check connection and power to RADC.",
+      "Transmit error": "Sub-function not supported: indicator that the radar is stuck in bootloader due to failed update, update RADC and try again"
+    },
+    "tasks": [
+      "RUN - TEST-SELF_RADC_X_CAN-CHANNEL-2"
+    ]
+  },
+  "radiator_condenser_fan": {
+    "metric_name": {
+      "FAN_OPERATION": "Radiator condenser fan motor faulted or could not reach target speed.",
+      "FAN_OPERATION_WARNING": "Radiator condenser fan motor set a warning."
+    },
+    "postfix": "Check that nothing is blocking fan from spinning, check connection and retry. If issue persists, replace part.",
+    "tasks": [
+      "RUN - TEST-SELF_VCBATT_X_FAN-RADIATOR-CONDENSER"
+    ]
+  },
+  "rcm_connections": {
+    "task_name": {
+      "ALR-RETRACTOR-SWITCH": "Check connections to the Automatic Locking Retractor Switch (ALR). If connection is good, replace part.",
+      "CHASSIS-CAN": "Check CAN communication pinout from RCM module to Chassis CAN bus.",
+      "DAB-STAGE-1": "Driver steering wheel stage 1 airbag.",
+      "DAB-STAGE-2": "Driver steering wheel stage 2 airbag.",
+      "DRV_AIRBAG-ACTIVE-VENT": "Driver active vent airbag",
+      "DRV_AIRBAG-STAGE-1": "Driver stage 1 airbag.",
+      "DRV_AIRBAG-STAGE-2": "Driver stage 2 airbag.",
+      "DRV_INBOARD-AIRBAG-FAR-SIDE": "Driver inboard far side airbag.",
+      "DRV_KNEE-AIRBAG": "Driver knee airbag.",
+      "DRV_LAP-PRETENSIONER": "Driver lap pretensioner.",
+      "DRV_RETRACTOR-PRETENSIONER": "Driver retractor pretensioner.",
+      "DRV_SEATBELT-LOAD-LIMITER": "Driver seatbelt load limiter.",
+      "FRONT-C_IMPACT-SENSOR": "Front center impact sensor.",
+      "FRONT-L_DOOR-PRESSURE": "Front left door pressure sensor.",
+      "FRONT-L_IMPACT-SENSOR": "Front left impact sensor.",
+      "FRONT-L_IMPACT-SENSOR-MIDDLE": "Front left middle impact sensor.",
+      "FRONT-R_DOOR-PRESSURE": "Front right door pressure sensor.",
+      "FRONT-R_IMPACT-SENSOR": "Front right impact sensor.",
+      "FRONT-R_IMPACT-SENSOR-MIDDLE": "Front right middle impact sensor.",
+      "L_B-PILLAR-IMPACT-SENSOR": "Left b-pillar impact sensor.",
+      "L_C-PILLAR-IMPACT-SENSOR": "Left c-pillar impact sensor.",
+      "PAS_AIRBAG-ACTIVE-VENT": "Passenger active vent airbag.",
+      "PAS_AIRBAG-STAGE-1": "Passenger stage 1 airbag.",
+      "PAS_AIRBAG-STAGE-2": "Passenger stage 2 airbag.",
+      "PAS_KNEE-AIRBAG": "Passenger knee airbag.",
+      "PAS_LAP-PRETENSIONER": "Passenger lap pretensioner.",
+      "PAS_RETRACTOR-PRETENSIONER": "Passenger retractor pretensioner.",
+      "PAS_SEATBELT-LOAD-LIMITER": "Passenger seatbelt load limiter",
+      "PRIVATE-CAN": "Check CAN communication pinout from RCM module to Private CAN bus.",
+      "PYRO": "Check connections to the pyrotechnic device. If connection is good, replace part.",
+      "R1-L_CURTAIN-AIRBAG": "Row 1 left curtain airbag.",
+      "R1-L_LAP-PRETENSIONER": "Row 1 left lap pretensioner.",
+      "R1-L_RETRACTOR-PRETENSIONER": "Row 1 left retractor pretensioner.",
+      "R1-L_SEATBELT-LOAD-LIMITER": "Row 1 left seatbelt load limiter.",
+      "R1-L_SIDE-AIRBAG": "Row 1 left side airbag.",
+      "R1-R_CURTAIN-AIRBAG": "Row 1 right curtain airbag.",
+      "R1-R_LAP-PRETENSIONER": "Row 1 right lap pretensioner.",
+      "R1-R_RETRACTOR-PRETENSIONER": "Row 1 right retractor pretensioner.",
+      "R1-R_SEATBELT-LOAD-LIMITER": "Row 1 right seatbelt load limiter.",
+      "R1-R_SIDE-AIRBAG": "Row 1 right side airbag.",
+      "R2-L_PRETENSIONER": "Row 2 left pretensioner.",
+      "R2-L_RETRACTOR-PRETENSIONER": "Row 2 left retractor pretensioner.",
+      "R2-R_PRETENSIONER": "Row 2 right pretensioner.",
+      "R2-R_RETRACTOR-PRETENSIONER": "Row 2 right retractor pretensioner.",
+      "REAR-L_DOOR-PRESSURE": "Rear left door pressure sensor.",
+      "REAR-R_DOOR-PRESSURE": "Rear right door pressure sensor.",
+      "R_B-PILLAR-IMPACT-SENSOR": "Right b-pillar impact sensor.",
+      "R_C-PILLAR-IMPACT-SENSOR": "Right c-pillar impact sensor.",
+      "SAT": "Check connections to the airbag. If connection is good, replace part.",
+      "SN_RCM_": "Unable to read Serial Number. Check connections to the airbag. If connection is good, replace part.",
+      "TEST-SN_RCM": "Unable to read RCM serial number. Check connection to RCM. If connection is good, replace RCM."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_RCM_X_CHASSIS-CAN",
+      "RUN - TEST-SELF_RCM_X_PRIVATE-CAN",
+      "RUN - TEST-PYRO_RCM_R1-L_CURTAIN-AIRBAG",
+      "RUN - TEST-PYRO_RCM_R1-R_CURTAIN-AIRBAG",
+      "RUN - TEST-PYRO_RCM_PAS_AIRBAG-STAGE-1",
+      "RUN - TEST-PYRO_RCM_PAS_AIRBAG-STAGE-2",
+      "RUN - TEST-PYRO_RCM_R2-L_PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R2-R_PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_PAS_AIRBAG-ACTIVE-VENT",
+      "RUN - TEST-PYRO_RCM_DRV_KNEE-AIRBAG",
+      "RUN - TEST-PYRO_RCM_PAS_KNEE-AIRBAG",
+      "RUN - TEST-PYRO_RCM_DRV_RETRACTOR-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_DRV_SEATBELT-LOAD-LIMITER",
+      "RUN - TEST-PYRO_RCM_PAS_RETRACTOR-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_PAS_SEATBELT-LOAD-LIMITER",
+      "RUN - TEST-PYRO_RCM_DRV_LAP-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_PAS_LAP-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R1-L_SIDE-AIRBAG",
+      "RUN - TEST-PYRO_RCM_R1-R_SIDE-AIRBAG",
+      "RUN - TEST-PYRO_RCM_X_DAB-STAGE-1",
+      "RUN - TEST-PYRO_RCM_X_DAB-STAGE-2",
+      "RUN - TEST-SAT_RCM_L_B-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_R_B-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_L_C-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_R_C-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_FRONT-L_IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_FRONT-C_IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_FRONT-R_IMPACT-SENSOR",
+      "RUN - TEST-SAT_RCM_FRONT-L_DOOR-PRESSURE",
+      "RUN - TEST-SAT_RCM_FRONT-R_DOOR-PRESSURE",
+      "RUN - TEST_RCM_X_ALR-RETRACTOR-SWITCH",
+      "RUN - TEST-SN_RCM",
+      "RUN - TEST-SN_RCM_FRONT-C_IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_FRONT-R_IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_FRONT-L_IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_L_B-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_L_C-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_R_B-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_R_C-PILLAR-IMPACT-SENSOR",
+      "RUN - TEST-SN_RCM_FRONT-L_DOOR-PRESSURE",
+      "RUN - TEST-SN_RCM_FRONT-R_DOOR-PRESSURE",
+      "RUN - TEST-SAT_RCM_REAR-L_DOOR-PRESSURE",
+      "RUN - TEST-SAT_RCM_REAR-R_DOOR-PRESSURE",
+      "RUN - TEST-SN_RCM_REAR-L_DOOR-PRESSURE",
+      "RUN - TEST-SN_RCM_REAR-R_DOOR-PRESSURE",
+      "RUN - TEST-PYRO_RCM_DRV_AIRBAG-ACTIVE-VENT",
+      "RUN - TEST-PYRO_RCM_DRV_AIRBAG-STAGE-1",
+      "RUN - TEST-PYRO_RCM_DRV_AIRBAG-STAGE-2",
+      "RUN - TEST-PYRO_RCM_DRV_INBOARD-AIRBAG-FAR-SIDE",
+      "RUN - TEST-SAT_RCM_FRONT-L_IMPACT-SENSOR-MIDDLE",
+      "RUN - TEST-SAT_RCM_FRONT-R_IMPACT-SENSOR-MIDDLE",
+      "RUN - TEST-SN_RCM_FRONT-L_IMPACT-SENSOR-MIDDLE",
+      "RUN - TEST-SN_RCM_FRONT-R_IMPACT-SENSOR-MIDDLE",
+      "RUN - TEST-PYRO_RCM_R1-L_LAP-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R1-L_RETRACTOR-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R1-L_SEATBELT-LOAD-LIMITER",
+      "RUN - TEST-PYRO_RCM_R1-R_LAP-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R1-R_RETRACTOR-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R1-R_SEATBELT-LOAD-LIMITER",
+      "RUN - TEST-PYRO_RCM_R2-L_RETRACTOR-PRETENSIONER",
+      "RUN - TEST-PYRO_RCM_R2-R_RETRACTOR-PRETENSIONER"
+    ]
+  },
+  "rcm_imu_calibration": {
+    "exit_code": {
+      "1": "RCM failed to calibrate the IMU. Retry the IMU calibration routine.",
+      "2": "RCM power context failed. Check RCM power state and check factory mode is enabled.",
+      "3": "RCM IMU data is not available on the CAN bus. Retry the IMU calibration routine.",
+      "4": "Vehicle angle exceeds allowable limit. Ensure that the vehicle is on a flat surface and retry the IMU calibration routine."
+    },
+    "tasks": [
+      "RUN - PROC_RCM_IMU-CALIBRATION"
+    ]
+  },
+  "rcm_learn_vin": {
+    "exit_code": {
+      "1": "RCM failed to learn the correct VIN. Retry the VIN learn routine.",
+      "2": "RCM power context failed. Check RCM power state, check factory mode is enabled, retry VIN learn routine.",
+      "5": "Failed communication with RCM. Check RCM power state, check factory mode is enabled, retry VIN learn routine."
+    },
+    "tasks": [
+      "RUN - PROC_RCM_X_LEARN-VIN"
+    ]
+  },
+  "seats": {
+    "metric_name": {
+      "BACKREST_MOTOR_CURRENT": "Backrest motor failed to get power.",
+      "BACKREST_MOTOR_ENCODER": "Backrest motor failed to move.",
+      "BACKREST_SWITCH": "Backrest switch faulted or disconnected.",
+      "BUCKLE_SWITCH": "Buckle switch faulted or disconnected.",
+      "FAN_BACKREST_CURRENT": "Backrest fan failed to get power.",
+      "FAN_CUSHION_CURRENT": "Cushion fan failed to get power.",
+      "FOOTWELL_LED_CURRENT": "Footwell LED failed to turn on.",
+      "HEATPAD_CURRENT": "Heatpad failed to get power.",
+      "HEATPAD_THERMISTOR": "Heatpad thermistor disconnected.",
+      "LIFT_MOTOR_CURRENT": "Lift motor failed to get power.",
+      "LIFT_MOTOR_ENCODER": "Lift motor failed to move.",
+      "LUMBAR_ECU_CURRENT": "Lumbar ECU failed to get power.",
+      "LUMBAR_LIN": "Lumbar ECU communication is failing.",
+      "LUMBAR_SWITCH": "Lumbar switch faulted or disconnected.",
+      "OCCUPANCY_SWITCH": "Occupancy switch faulted or disconnected.",
+      "ROUTINE_STATUS": "Test failed with {value.}",
+      "STATUS": "Test failed with {value}.",
+      "TILT_MOTOR_CURRENT": "Tilt motor failed to get power.",
+      "TILT_MOTOR_ENCODER": "Tilt motor failed to move.",
+      "TRACK_IS_NOT_CALIBRATED": "Could not calibrate track",
+      "TRACK_LIFT_SWITCH": "Track life switch faulted or disconnected.",
+      "TRACK_MOTOR_CURRENT": "Track motor failed to get power.",
+      "TRACK_MOTOR_ENCODER": "Track motor failed to move.",
+      "TRACK_POSITION_SENSOR": "Track position sensor faulted or disconnected."
+    },
+    "postfix": "Ensure VC updates passed. Check connection and retry. If issue persists, replace part.",
+    "task_name": {
+      "VCLEFT": "Test failed on front left seat",
+      "VCRIGHT": "Test failed on front right seat.",
+      "VCSEATD": "Test failed on front driver seat.",
+      "VCSEATP": "Test failed on front passenger seat."
+    },
+    "tasks": [
+      "RUN - PROC_VCLEFT_SEAT-CALIBRATE",
+      "RUN - PROC_VCRIGHT_SEAT-CALIBRATE",
+      "RUN - TEST-SELF_VCRIGHT_FRONT_SEAT",
+      "RUN - TEST-SELF_VCSEATD_FRONT_SEAT",
+      "RUN - TEST-SELF_VCSEATD_FRONT_P2-SEAT",
+      "RUN - TEST-SELF_VCSEATP_FRONT_P2-SEAT",
+      "RUN - PROC_VCSEATD_SEAT-CALIBRATE"
+    ]
+  },
+  "speaker_a2b_infoz": {
+    "exit_code": {
+      "0": "Unknown Failure - Reboot the car and run the test with doors and windows closed. Escalate to Engineering if this happens again.",
+      "1": "This test was run twice at the same time. Reboot the car and run the test with doors and windows closed.",
+      "10": "Audio system not coming up - The ADSP will need to be rebooted or the whole MCU might need a reboot before running the test again. Escalate to Engineering if this keeps happening.",
+      "11": "Unable to acquire valid speaker data - The ADSP will need to be rebooted or the whole MCU might need a reboot before running the test again. Escalate to Engineering if this keeps happening.",
+      "12": "The Main Audio A2B bus not fully functional - The following Node is failing: {value}.",
+      "13": "The ANC bus is not fully functional - The following Node is failing: {value}.",
+      "14": "Both A2B Busses have issues with possible disconnected Nodes.",
+      "15": "Base diagnoistics not reporting correctly. Reboot the car and run the test again. Escalate to Engineering if it continues.",
+      "16": "Premium diagnoistics not reporting correctly. Reboot the car and run the test again. Escalate to Engineering if it continues.",
+      "2": "Audio System not supported - Run the test once again, if it keeps failing for this reason contact Engineering.",
+      "3": "Usage check - Something is wrong with the odin test - it is using the incorrect parameters. Escalate to Engineering.",
+      "4": "Audio system not responding - Reboot the car and run the test again.",
+      "5": "PWS speaker not connected - please check the connection.",
+      "6": "Speaker(s) powered by MCU not connected.",
+      "7": "Speaker(s) powered by Premium Amp not connected.",
+      "8": "MCU and Premium Amp speakers not connected.",
+      "87": "Failed to functions. Something is wrong with firmware. Escalate to Engineering.",
+      "9": "Wrong vehicle type being tested."
+    },
+    "metric_value": {
+      "Unknown Node": "The ADSP is reporting incorrect diagnoistic data, please restart the car computer and re-run this test. If it keeps reporting 'Unknown Node' - please escalate to Engineering."
+    },
+    "tasks": [
+      "RUN - TEST-BASH_SPK_X_PWS-CHECK",
+      "RUN - TEST-BASH_SPK_X_MCU-CHECK",
+      "RUN - TEST-BASH_SPK_X_PREM-CHECK",
+      "RUN - TEST-BASH_SPK_X_A2B-CHECK",
+      "RUN - TEST-BASH_SPK_X_A2B-ANC-CHECK"
+    ]
+  },
+  "steering_column": {
+    "metric_name": {
+      "IN_OUT_UNCALIBRATED": "Failed to calibrate IN & OUT positions",
+      "UP_DOWN_UNCALIBRATED": "Failed to calibration UP and DOWN positions"
+    },
+    "tasks": [
+      "RUN - PROC-VCLEFT_X_STEERING-COLUMN-CALIBRATION"
+    ],
+    "postfix": "Make sure module is communicating, check if column is able to move freely"
+  },
+  "tester_present": {
+    "exit_code": {
+      "*": "Unable to detect ECU. Check power and CAN connections to the ECU before retry. If verified present, replace ECU."
+    },
+    "task_name": {
+      "CMP": "Failed to ping CMP.",
+      "CP": "Failed to ping CP.",
+      "DAS": "Failed to ping DAS.",
+      "DIF": "Failed to ping DIF.",
+      "DIREL": "Failed to ping DIREL.",
+      "DIRER": "Failed to ping DIRER.",
+      "EPAS3P": "Failed to ping EPAS3P.",
+      "EPAS3S": "Failed to ping EPAS3S.",
+      "EPBL": "Failed to ping EPBL.",
+      "EPBR": "Failed to ping EPBR.",
+      "ESP": "Failed to ping ESP.",
+      "HVBMS": "Failed to ping HVBMS.",
+      "HVP": "Failed to ping HVP.",
+      "IBST": "Failed to ping IBST.",
+      "OCS1P": "Failed to ping OCS1P.",
+      "PARK": "Failed to ping PARK.",
+      "PCS": "Failed to ping PCS.",
+      "PMF": "Failed to ping PMF.",
+      "PMR": "Failed to ping PMR.",
+      "PTC": "Failed to ping PTC.",
+      "RADC": "Failed to ping RADC.",
+      "RCM": "Failed to ping RCM.",
+      "SCCM": "Failed to ping SCCM.",
+      "TAS": "Failed to ping TAS.",
+      "TPMS": "Failed to ping TPMS.",
+      "VCFRONT": "Failed to ping VCFRONT.",
+      "VCLEFT": "Failed to ping VCLEFT.",
+      "VCRIGHT": "Failed to ping VCRIGHT.",
+      "VCSEATP": "Failed to ping VCSEATP.",
+      "VCSEC": "Failed to ping VCSEC."
+    },
+    "tasks": [
+      "RUN - PING-TP_CMP",
+      "RUN - PING-TP_CP",
+      "RUN - PING-TP_DAS",
+      "RUN - PING-TP_EPAS3P",
+      "RUN - PING-TP_EPAS3S",
+      "RUN - PING-TP_EPBL",
+      "RUN - PING-TP_EPBR",
+      "RUN - PING-TP_ESP",
+      "RUN - PING-TP_HVBMS",
+      "RUN - PING-TP_HVP",
+      "RUN - PING-TP_IBST",
+      "RUN - PING-TP_OCS1P",
+      "RUN - PING-TP_PARK",
+      "RUN - PING-TP_PCS",
+      "RUN - PING-TP_PTC",
+      "RUN - PING-TP_RADC",
+      "RUN - PING-TP_RCM-MFG",
+      "RUN - PING-TP_RCM",
+      "RUN - PING-TP_SCCM",
+      "RUN - PING-TP_TAS",
+      "RUN - PING-TP_TPMS",
+      "RUN - PING-TP_VCFRONT",
+      "RUN - PING-TP_VCLEFT",
+      "RUN - PING-TP_VCRIGHT",
+      "RUN - PING-TP_VCSEC",
+      "RUN - PING-TP_VCSEC_X_PINGLOOP",
+      "RUN - PING-TP_PMR",
+      "RUN - PING-TP_PMF",
+      "RUN - PING-TP_DIF",
+      "RUN - PING-TP_DIREL",
+      "RUN - PING-TP_DIRER",
+      "RUN - PING-TP_VCSEATP"
+    ]
+  },
+  "uds_ecu_reset": {
+    "exit_code": {
+      "*": "Unable to reset the ECU. Make sure that the correct power state is set and there is power, ground and communication to the ECU Module."
+    },
+    "task_name": {
+      "DAS": "Failed to reset DAS.",
+      "VCFRONT": "Failed to reset VCFRONT.",
+      "VCLEFT":  "Failed to reset VCLEFT.",
+      "VCRIGHT": "Failed to reset VCRIGHT."
+    },
+    "tasks": [
+      "RUN - TEST-RESET_DAS",
+      "RUN - TEST-RESET_VCFRONT",
+      "RUN - TEST-RESET_VCLEFT",
+      "RUN - TEST-RESET_VCRIGHT"
+    ]
+  },
+  "usm_programming": {
+    "metric_name": {
+      "SENSOR_1_ADDRESS_PROGRAMMED": "Could not program Sensor 1",
+      "SENSOR_2_ADDRESS_PROGRAMMED": "Could not program Sensor 2",
+      "SENSOR_3_ADDRESS_PROGRAMMED": "Could not program Sensor 3",
+      "SENSOR_4_ADDRESS_PROGRAMMED": "Could not program Sensor 4",
+      "SENSOR_5_ADDRESS_PROGRAMMED": "Could not program Sensor 5",
+      "SENSOR_6_ADDRESS_PROGRAMMED": "Could not program Sensor 6",
+      "SENSOR_7_ADDRESS_PROGRAMMED": "Could not program Sensor 7",
+      "SENSOR_8_ADDRESS_PROGRAMMED": "Could not program Sensor 8",
+      "SENSOR_9_ADDRESS_PROGRAMMED": "Could not program Sensor 9",
+      "SENSOR_10_ADDRESS_PROGRAMMED": "Could not program Sensor 10",
+      "SENSOR_11_ADDRESS_PROGRAMMED": "Could not program Sensor 11",
+      "SENSOR_12_ADDRESS_PROGRAMMED": "Could not program Sensor 12"
+    },
+    "postfix": "Check the connections to the sensor",
+    "tasks": [
+      "RUN - PROC_USM_FRONT_PROGRAM-USS-ADDRESSES",
+      "RUN - PROC_USM_REAR_PROGRAM-USS-ADDRESSES"
+    ]
+  },
+
+  "vc_hvil": {
+    "metric_name": {
+      "BRIDGE_EFUSE_VOLTAGE": "Check bridge sync signal connector X024-3, X015-3 else power cycle.",
+      "DRIVE_INVERTER_1_VOLTAGE": "If the VCLeft Efuse voltage does not report an error, Check the following connections for shorts X038A-6, X930, X320-3, X320A-3.",
+      "DRIVE_INVERTER_2_VOLTAGE": "If the VCLeft Efuse voltage does not report an error, Check the following connections for shorts X38A-7, X932, X382A-3.",
+      "DRIVE_INVERTER_FRONT_VOLTAGE": "If the Bridge Efuse voltage does not report an error, check Drive Inverter Front X010-F3 Connector.",
+      "HV_CONTACTORS_VOLTAGE": "If the Bridge Efuse voltage and VCRight Efuse Voltage do not report an error, check HV Contactors X050B-5, X535, X0585-18 connectors.",
+      "HV_CONTROLLER_FAULTED": "If the Bridge Efuse voltage and VCRight Efuse Voltage do not report an error, check HV Contactors X057-15, X585-8 connectors.",
+      "PCS_EFUSE_VOLTAGE": "If the Bridge Efuse voltage does not report an error, check PCS Power In X014-3 connector or PCS Efuse fault.",
+      "PCS_ENABLE_VOLTAGE": "If the Bridge Efuse voltage does not report an error, check Standby Out X057-9, and X010-G1.",
+      "REVERSE_BATTERY_EFUSE_FAULT": "Perform vehicle power cycle by disconnecting and reconnecting LV battery connector.",
+      "VBAT_PROT_VOLTAGE": "Perform vehicle power cycle by disconnecting and reconnecting LV battery connector.",
+      "VCLEFT_EFUSE_VOLTAGE": "Check downstream connectors from VCBATT to VCLEFT for shorts. Else power cycle.",
+      "VCRIGHT_EFUSE_VOLTAGE": "If the Bridge Efuse voltage does not report an error, check downstream connectors from VCFRONT to VCRIGHT for shorts X014-1. Else power cycle.",
+      "VEHICLE_POWER_STATE": "Rerun self test or power cycle."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCFRONT_X_HVIL-CONDITIONS",
+      "RUN - TEST-SELF_VCBATT_X_HVIL-CONDITIONS",
+      "RUN - TEST-SELF_VCRIGHT_X_HVIL-CONDITIONS",
+      "RUN - TEST-SELF_VCLEFT_X_HVIL-CONDITIONS"
+    ]
+  },
+  "vcbatt_reconnect": {
+    "metric_name": {
+      "DCDC_OFF": "Ensure contactors are closed and the PCS is supporting the car without a power supply/lead acid battery connected.",
+      "HV_OFF": "Ensure contactors are closed and the PCS is supporting the car without a power supply/lead acid battery connected.",
+      "LVBMS_MIA": "Ensure there is a good connection and the green tab on the connector is pushed in. If it still does not work then replace the LV battery.",
+      "REVERSE_BATTERY_EFUSE_FAULT": "Power cycle the car and try again. Make sure to disconnect a power supply/lead acid battery before trying to reconnect the LV battery.",
+      "SOC_UNRECOVERABLE": "The battery is too discharged to be recovered. Please replace it with a new LV battery."
+    },
+    "tasks": [
+      "RUN - PROC_VCBATT_X_RECONNECT-LV-BATTERY"
+    ]
+  },
+  "vcfront_homelink": {
+    "metric_name": {
+      "VCFRONT.SELF_TEST_POWER": "Could not set VCFRONT power state. Ensure vehicle accesorry rail is powered on before retrying"
+    },
+    "metric_value": {
+      "NOT_RUNNING_STOP_REQUESTED": "Routine has stopped on request",
+      "NOT_RUNNING_INTERRUPTED": "Routine was interrupted",
+      "NOT_RUNNING_NEVER_STARTED": "Routine was never started",
+      "RUNNING": "Routine is still running",
+      "FAILED": "Could not communicate with the module. After making sure the Homelink ECU is installed and connected, inspect wiring for issues"
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCFRONT_X_HOMELINK"
+    ]
+  },
+  "vcleft_semi_height_sensor": {
+    "metric_name": {
+      "DISCONNECTED": "Height sensor is disconnected. Check connection and retry."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFTS_X_HEIGHT-SENSOR-FL",
+      "RUN - TEST-SELF_VCLEFTS_X_HEIGHT-SENSOR-FR",
+      "RUN - TEST-SELF_VCLEFTS_X_HEIGHT-SENSOR-M",
+      "RUN - TEST-SELF_VCLEFTS_X_HEIGHT-SENSOR-R"
+    ]
+  },
+  "vcleft_semi_valve": {
+    "metric_name": {
+      "PRESSURE_SENSOR": "pressure sensor,",
+      "VALVE_EXHAUST": "exhaust valve,",
+      "VALVE_F": "front valve,",
+      "VALVE_RL": "rear left valve,",
+      "VALVE_RR": "rear right valve,",
+      "VALVE_SUPPLY": "supply valve,"
+    },
+    "postfix": "Check that the air suspension valve block is securely connected.",
+    "prefix": "The following valves/sensors were not detected: ",
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFTS_X_VALVE-BLOCK-CONNECTION"
+    ]
+  },
+  "vcleft_semi_window_heater": {
+    "metric_name": {
+      "CAMERA_WINDSHIELD_HEATER_CURRENT": "Camera Windshiled Heater not detected. Check connection to heater element and retry.",
+      "VENT_WINDOW_HEATER_CURRENT": "Vent Window Heater not detected. Check connection to heater element and retry."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCLEFTP_WINDOW_HEATERS"
+    ]
+  },
+  "vcsec_tpms_learn": {
+    "metric_name": {
+      "MAC_ADDR_LEN": "Sensor ID read mismatch. Double check input IDs and re-run routine.",
+      "PWR_STATUS": "VCSEC power context failed. Check VCSEC power state and check factory mode is enabled. Re-run routine."
+    },
+    "tasks": [
+      "RUN - PROC_VCSEC_X_TPMS-SENSOR-LEARN"
+    ]
+  },
+  "wheel_speed_sensors": {
+    "metric_name": {
+      "Line Short To Ground": "Check wheel speed sensor harness and ESP connector for line interruptions, shorts to ground.",
+      "Line Short To UBat": "Check wheel speed sensor harness and ESP connector for line interruptions, shorts to 12V.",
+      "Line Short to Gnd": "Check wheel speed sensor harness and ESP connector for line interruptions, shorts to ground.",
+      "Line Short to Ground or Interruption": "Check wheel speed sensor harness and ESP connector for line interruptions, shorts to ground.",
+      "Wrong Component detected": "Ensure part number of wheel speed sensor is correct for the vehicle.",
+      "failure_vehicle_state": "Rerun test and check ESP ECU harness and connector."
+    },
+    "tasks": [
+      "RUN - TEST-ESP_FRONT-L-WHEEL-SENSOR",
+      "RUN - TEST-ESP_FRONT-R-WHEEL-SENSOR",
+      "RUN - TEST-ESP_REAR-L-WHEEL-SENSOR",
+      "RUN - TEST-ESP_REAR-R-WHEEL-SENSOR"
+    ]
+  },
+  "wiper": {
+    "metric_name": {
+      "STATUS": "Test failed with status {value}.",
+      "WIPER_HEATER_POWER": "Check connection to the glass heater and retry.",
+      "WIPER_HEATER_POWER_1": "Lower windshield glass heater is faulted or disconnected.",
+      "WIPER_HEATER_POWER_2": "Upper windshield glass heater is faulted or disconnected."
+    },
+    "tasks": [
+      "RUN - TEST-SELF_VCRIGHT_X_WIPER-HEATER",
+      "RUN - TEST-SELF_VCRIGHT_X_WIPER"
+    ]
+  }
+}

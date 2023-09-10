@@ -1,0 +1,12 @@
+{
+    "busMetadata": {
+        "baudrate": 500000,
+        "canFrameFormat": "base",
+        "id": 2,
+        "name": "PT",
+        "protocol": "can"
+    },
+    "messages": {},
+    "product": "ModelS",
+    "version": "3.0.0"
+}
