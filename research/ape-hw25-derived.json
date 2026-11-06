@@ -1,0 +1,233 @@
+{
+  "schema": "derived-ape-research-profile",
+  "schema_version": 1,
+  "profile_id": "ape-hw25-static",
+  "hardware": "HW2.5",
+  "network": null,
+  "network_status": "unverified",
+  "source": {
+    "kind": "independent static binary-analysis findings",
+    "artifact_class": "older APE HW2.5 image",
+    "source_year": 2025,
+    "source_files": [
+      "canrx",
+      "cantx",
+      "autopilot_state_machine"
+    ],
+    "provenance": "Firmware and APE images acquired from Lunars.",
+    "evidence_summary": "README.md"
+  },
+  "compatibility": {
+    "current_hw4": "unverified",
+    "modern_gui_control_id": "Do not substitute 0x3FD for the recovered 0x3EE request transport.",
+    "original_compact_profiles": "Separate schema; not merged with archived bus profiles."
+  },
+  "bit_numbering": "Zero-based least-significant-bit first within the little-endian payload.",
+  "naming": "All signal names in this profile are research labels, not claimed OEM schema names.",
+  "messages": [
+    {
+      "message_id": 1006,
+      "label": "request_input",
+      "direction": "into_APE",
+      "producer": "external sender unresolved",
+      "consumer": "canrx",
+      "length_bytes": null,
+      "required_decode_bytes": 8,
+      "dlc_behavior": "Decoder rejects lengths below8; length8 continues; above8 logs a diagnostic and continues. This is not exact-DLC validation.",
+      "multiplexer": {
+        "start_position": 0,
+        "width": 3
+      },
+      "signals": [
+        {
+          "name": "visualization_request_raw",
+          "start_position": 37,
+          "width": 1,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": 0,
+          "value_description": {},
+          "evidence": {
+            "binary": "canrx",
+            "locations": [
+              "0x2ed150",
+              "0x2b2f58",
+              "0x2b2f5c"
+            ],
+            "verified": "Input bit reaches RoadRunnerSignals payload +0x3d6, timestamped snapshot +0x3e6; update bitmap +0x30 bit34 gates callback. Both 0 and 1 overwrite.",
+            "unresolved": "Actual rendering consumer and current-hardware equivalence."
+          }
+        },
+        {
+          "name": "stops_control_request_raw",
+          "start_position": 38,
+          "width": 1,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": 0,
+          "value_description": {},
+          "evidence": {
+            "binary": "canrx",
+            "locations": [
+              "0x2ed0f4",
+              "0x2ed11c",
+              "0x2b27a0"
+            ],
+            "verified": "Input reaches callback packed state and, subject to receiver guards, accepted state +0x4cc; publication adds 0x10, yielding RoadRunnerSignals snapshot +0x4dc. Accepted state uses 0 unknown, 1 disabled, 2 enabled.",
+            "unresolved": "This wire bit is a request, not an acknowledgement; receiver guards can suppress updates. Exact current-hardware acceptance is unknown."
+          }
+        },
+        {
+          "name": "lane_graph_request_raw",
+          "start_position": 45,
+          "width": 1,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": 1,
+          "value_description": {},
+          "evidence": {
+            "binary": "canrx",
+            "locations": [
+              "0x2edcc4",
+              "0x2edcec",
+              "0x2b2df4"
+            ],
+            "verified": "Input reaches packed +0x294e bit8, then RoadRunnerSignals payload +0x3c0 / snapshot +0x3d0; bitmap +0x30 bit44 gates callback.",
+            "unresolved": "Renderer use and current-hardware equivalence."
+          }
+        },
+        {
+          "name": "mux0_bit46_raw",
+          "start_position": 46,
+          "width": 1,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": 0,
+          "value_description": {},
+          "evidence": {
+            "binary": "canrx",
+            "locations": [
+              "0x2ecff0",
+              "0x2ed01c"
+            ],
+            "verified": "Input reaches packed +0x2946 bit55.",
+            "unresolved": "Normalized consumer and semantic identity; do not assign modern full-FSD semantics from bit position alone."
+          }
+        }
+      ]
+    },
+    {
+      "message_id": 921,
+      "label": "state_output",
+      "direction": "out_of_APE",
+      "producer": "cantx",
+      "length_bytes": null,
+      "multiplexer": null,
+      "signals": [
+        {
+          "name": "translated_state_raw",
+          "start_position": 0,
+          "width": 4,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": null,
+          "value_description": {},
+          "evidence": {
+            "binary": "cantx",
+            "locations": [
+              "0x26ec40",
+              "0x26ed0c",
+              "0x2b5da0"
+            ],
+            "verified": "State producer reads ASM snapshot +0x70 with additional inputs, translates it, and packs low four bits of 0x399. Recovered old helper does not emit 6.",
+            "unresolved": "Exact old state names and modern enum equivalence."
+          }
+        }
+      ]
+    },
+    {
+      "message_id": 583,
+      "label": "abort_output",
+      "direction": "out_of_APE",
+      "producer": "cantx",
+      "length_bytes": null,
+      "multiplexer": null,
+      "signals": [
+        {
+          "name": "translated_abort_reason_raw",
+          "start_position": 32,
+          "width": 7,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": null,
+          "value_description": {},
+          "evidence": {
+            "binary": "cantx",
+            "locations": [
+              "0x271340",
+              "0x2b6300"
+            ],
+            "verified": "ASM snapshot +0x84 passes through numeric translation to payload bits32..38.",
+            "unresolved": "Exact old enum names; this is not the HOLD reason at parent +0x558."
+          }
+        }
+      ]
+    },
+    {
+      "message_id": 1497,
+      "label": "diagnostic_output",
+      "direction": "out_of_APE",
+      "producer": "cantx",
+      "length_bytes": null,
+      "multiplexer": {
+        "start_position": 0,
+        "width": 4
+      },
+      "signals": [
+        {
+          "name": "translated_check_result_raw",
+          "start_position": 46,
+          "width": 7,
+          "endianness": "LITTLE",
+          "signedness": "UNSIGNED",
+          "scale": 1,
+          "offset": 0,
+          "mux_id": 2,
+          "value_description": {},
+          "evidence": {
+            "binary": "cantx",
+            "locations": [
+              "0x26c810",
+              "0x26c884",
+              "0x26cb0c",
+              "0x2b5f90",
+              "0x26cb20",
+              "0x26cb28"
+            ],
+            "verified": "Paired load reads ASM snapshot +0x74; 53-entry translation then packs payload bits46..52. Input12 maps to wire12; unsigned inputs above52 map to45.",
+            "unresolved": "Old result12 meaning and modern semantic equivalence. This conditional diagnostic is not a request-receipt acknowledgement."
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Partial field inventory, not a complete message decoder.",
+    "No physical bus attribution, capture, runtime activation or HW4 compatibility is established.",
+    "Unknown message lengths remain null; field extraction requires sufficient bytes and a matching multiplexer.",
+    "No modern enum table has been copied into this older profile.",
+    "HOLD-related ASM snapshot +0x68 has no proven wire mapping and is intentionally not represented as a signal."
+  ]
+}
