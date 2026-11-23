@@ -1,6 +1,6 @@
 {
   "coverage": {
-    "keys_decoded": 174,
+    "keys_decoded": 177,
     "keys_total": 178,
     "values_decoded": 481,
     "values_total": 496
@@ -120,6 +120,7 @@
     "centerConsoleControllerType": [
       "NONE"
     ],
+    "chargingID": [],
     "chassisSubType": [
       "BASE",
       "PERFORMANCE",
@@ -528,6 +529,7 @@
       "NOT_INSTALLED",
       "TK"
     ],
+    "prngState": [],
     "prodCmdKey": [],
     "prodCodeKey": [],
     "ptcControlMode": [
@@ -705,6 +707,7 @@
       "NOT_ALLOWED",
       "PAY_AS_YOU_GO"
     ],
+    "testGroupID": [],
     "tireType": [
       "BRIDGESTONE_ALL_SEASON_20",
       "BRIDGESTONE_SUMMER_18",
@@ -818,10 +821,7 @@
   "salt": "w15u4jv09hlfyd85vho0b6i95q8stvjg",
   "undecoded": {
     "key_hashes": [
-      "0d216ca444c703408b4b80d3b62a1f949b5681934997303ebeb9d63aa69ed014",
-      "58cc84b3552f0836201c3f382d0e7a929581a40510e86ce0c58adc59fe8b4022",
-      "67f26e2a8db8e8159787060d2705dd0dfcdf358ee8b5c4b7c635fb0e652679bc",
-      "f5041d534d2da660b609bd5dea47c2bfc6b57e06dc03d1d1e830a179b226202a"
+      "0d216ca444c703408b4b80d3b62a1f949b5681934997303ebeb9d63aa69ed014"
     ],
     "value_hashes": {
       "0d216ca444c703408b4b80d3b62a1f949b5681934997303ebeb9d63aa69ed014": 1,

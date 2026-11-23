@@ -1,6 +1,6 @@
 {
   "coverage": {
-    "keys_decoded": 181,
+    "keys_decoded": 184,
     "keys_total": 185,
     "values_decoded": 503,
     "values_total": 519
@@ -120,6 +120,7 @@
     "centerConsoleControllerType": [
       "NONE"
     ],
+    "chargingID": [],
     "chassisSubType": [
       "BASE",
       "PERFORMANCE",
@@ -563,6 +564,7 @@
       "NOT_INSTALLED",
       "TK"
     ],
+    "prngState": [],
     "prodCmdKey": [],
     "prodCodeKey": [],
     "r79BehaviorOverride": [
@@ -748,6 +750,7 @@
       "NOT_ALLOWED",
       "PAY_AS_YOU_GO"
     ],
+    "testGroupID": [],
     "thirdRowSeatType": [
       "FLAT_FOLD",
       "NONE"
@@ -854,10 +857,7 @@
   "salt": "qth1bzewgp77ah4tr87nf9w6q0cwmf8c",
   "undecoded": {
     "key_hashes": [
-      "74b583f4d46db7e837777a770167adfc11097e4be1ef9fa986b4a37391d4e318",
-      "b2287bb6053622e6baa45bd3de7e38304a54ec1aac2fa4a2b1eacf27ae6cdd6e",
-      "bcbefae73aa9a59741f9cca7440ab0040903f44f1e7a78c8fec7a24c0afd6c3d",
-      "d9635029faa0bc3a6b77514ce92d1314d5bc633fcb6207e8ac26868882204bf9"
+      "bcbefae73aa9a59741f9cca7440ab0040903f44f1e7a78c8fec7a24c0afd6c3d"
     ],
     "value_hashes": {
       "autopilotFeaturePackage": 2,
