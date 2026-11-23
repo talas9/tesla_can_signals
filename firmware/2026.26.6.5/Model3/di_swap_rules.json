@@ -1,0 +1,736 @@
+{
+  "motor_gearbox_to_assyIDs_map": [
+    {
+      "assemblyIDs": [
+        63,
+        65,
+        68,
+        70,
+        75,
+        79,
+        93,
+        94,
+        96,
+        108,
+        109
+      ]
+    },
+    {
+      "assemblyIDs": [
+        64,
+        69,
+        71,
+        72,
+        74,
+        80
+      ]
+    },
+    {
+      "assemblyIDs": [
+        66,
+        76,
+        81,
+        83,
+        84,
+        107,
+        152,
+        155
+      ]
+    },
+    {
+      "assemblyIDs": [
+        67,
+        78,
+        86,
+        91,
+        92,
+        106
+      ]
+    },
+    {
+      "assemblyIDs": [
+        87,
+        110
+      ]
+    },
+    {
+      "assemblyIDs": [
+        88,
+        90
+      ]
+    },
+    {
+      "assemblyIDs": [
+        89
+      ]
+    },
+    {
+      "assemblyIDs": [
+        95,
+        112,
+        125,
+        154,
+        230
+      ]
+    },
+    {
+      "assemblyIDs": [
+        97,
+        99
+      ]
+    },
+    {
+      "assemblyIDs": [
+        98
+      ]
+    },
+    {
+      "assemblyIDs": [
+        116,
+        127,
+        200
+      ]
+    },
+    {
+      "assemblyIDs": [
+        117,
+        128,
+        201
+      ]
+    },
+    {
+      "assemblyIDs": [
+        118,
+        129,
+        202
+      ]
+    },
+    {
+      "assemblyIDs": [
+        121,
+        130,
+        134
+      ]
+    },
+    {
+      "assemblyIDs": [
+        122,
+        131,
+        135
+      ]
+    },
+    {
+      "assemblyIDs": [
+        123,
+        132,
+        136
+      ]
+    },
+    {
+      "assemblyIDs": [
+        124,
+        133,
+        137
+      ]
+    },
+    {
+      "assemblyIDs": [
+        126,
+        143,
+        158
+      ]
+    },
+    {
+      "assemblyIDs": [
+        138
+      ]
+    },
+    {
+      "assemblyIDs": [
+        139,
+        140
+      ]
+    },
+    {
+      "assemblyIDs": [
+        141
+      ]
+    },
+    {
+      "assemblyIDs": [
+        142
+      ]
+    },
+    {
+      "assemblyIDs": [
+        144,
+        145
+      ]
+    },
+    {
+      "assemblyIDs": [
+        146,
+        147
+      ]
+    },
+    {
+      "assemblyIDs": [
+        153
+      ]
+    },
+    {
+      "assemblyIDs": [
+        157
+      ]
+    },
+    {
+      "assemblyIDs": [
+        159
+      ]
+    },
+    {
+      "assemblyIDs": [
+        160,
+        161,
+        162,
+        163
+      ]
+    },
+    {
+      "assemblyIDs": [
+        164
+      ]
+    },
+    {
+      "assemblyIDs": [
+        165,
+        166
+      ]
+    },
+    {
+      "assemblyIDs": [
+        206,
+        208
+      ]
+    },
+    {
+      "assemblyIDs": [
+        207,
+        209
+      ]
+    },
+    {
+      "assemblyIDs": [
+        213,
+        214
+      ]
+    },
+    {
+      "assemblyIDs": [
+        215
+      ]
+    },
+    {
+      "assemblyIDs": [
+        222
+      ]
+    },
+    {
+      "assemblyIDs": [
+        223
+      ]
+    },
+    {
+      "assemblyIDs": [
+        224
+      ]
+    },
+    {
+      "assemblyIDs": [
+        225
+      ]
+    },
+    {
+      "assemblyIDs": [
+        226
+      ]
+    },
+    {
+      "assemblyIDs": [
+        227
+      ]
+    },
+    {
+      "assemblyIDs": [
+        228
+      ]
+    },
+    {
+      "assemblyIDs": [
+        229
+      ]
+    },
+    {
+      "assemblyIDs": [
+        231
+      ]
+    },
+    {
+      "assemblyIDs": [
+        232
+      ]
+    },
+    {
+      "assemblyIDs": [
+        233
+      ]
+    },
+    {
+      "assemblyIDs": [
+        236
+      ]
+    },
+    {
+      "assemblyIDs": [
+        238,
+        239
+      ]
+    }
+  ],
+  "subpackage_genealogy_to_powerstage_map": [
+    {
+      "assemblyIDs": [],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          0
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          0
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        80,
+        81
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          1
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        83,
+        155,
+        157,
+        206,
+        207
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          2
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        79,
+        84,
+        91
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          5
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        67,
+        108,
+        144,
+        146,
+        162
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          7
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        75,
+        87,
+        92
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          5
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        78,
+        109,
+        110,
+        145,
+        147,
+        159,
+        163,
+        164
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          7
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        88,
+        89,
+        90,
+        97,
+        98,
+        99
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          4,
+          5
+        ],
+        "digit9": [
+          5
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        112,
+        126
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          0
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          5
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        125,
+        143,
+        165,
+        231,
+        232,
+        233
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          0
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          8
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        154,
+        158,
+        166
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          0
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          7
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        94,
+        106
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          2,
+          3
+        ],
+        "digit9": [
+          8
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        86,
+        93
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          8
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        107,
+        152,
+        208,
+        209
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          9
+        ],
+        "digit5": [
+          0,
+          1
+        ],
+        "digit9": [
+          4
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        116,
+        117,
+        118,
+        121,
+        122,
+        123,
+        124,
+        222,
+        223
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          3
+        ],
+        "digit5": [
+          0
+        ],
+        "digit9": [
+          7
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        138,
+        140
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          3
+        ],
+        "digit5": [
+          0
+        ],
+        "digit9": [
+          9
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        134,
+        135,
+        136,
+        137,
+        139,
+        141,
+        142,
+        153
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          3
+        ],
+        "digit5": [
+          0
+        ],
+        "digit9": [
+          65
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        224,
+        225,
+        226,
+        227,
+        228,
+        229
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          3
+        ],
+        "digit5": [
+          1
+        ],
+        "digit9": [
+          9
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        230
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          5
+        ],
+        "digit5": [
+          0
+        ],
+        "digit9": [
+          0
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        236,
+        238
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          0,
+          4
+        ],
+        "digit5": [
+          0,
+          4
+        ],
+        "digit9": [
+          7
+        ]
+      }
+    },
+    {
+      "assemblyIDs": [
+        239
+      ],
+      "subpackagePartNumber": {
+        "digit4": [
+          0,
+          4
+        ],
+        "digit5": [
+          0,
+          4
+        ],
+        "digit9": [
+          8
+        ]
+      }
+    }
+  ]
+}

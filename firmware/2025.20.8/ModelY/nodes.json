@@ -1,0 +1,504 @@
+{
+    "CMP": {
+        "boot_message_name": "CMP_bootID",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_cmpRequest",
+        "response_message_name": "CMP_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "CP": {
+        "boot_message_name": "CP_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "CP.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_cpRequest",
+        "response_message_name": "CP_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "DAS": {
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "DAS.odj",
+            "APS.odj",
+            "APS3.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_dasRequest",
+        "response_message_name": "DAS_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "DIF": {
+        "boot_message_name": "DIF_bootID",
+        "data_upload": "tesla_protocol",
+        "force_auto_data_upload": true,
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "DI.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_difRequest",
+        "response_message_name": "DIF_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "DIR": {
+        "boot_message_name": "DIR_bootID",
+        "data_upload": "tesla_protocol",
+        "force_auto_data_upload": true,
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "DI.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_dirRequest",
+        "response_message_name": "DIR_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "EPAS3P": {
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_epas3pRequest",
+        "response_message_name": "EPAS3P_udsResponseCH",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "EPAS3P_APP": {
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_epas3pRequest",
+        "response_message_name": "EPAS3P_udsResponseCH",
+        "security": {
+            "algorithm": "mando_hash",
+            "buffer_size": 16,
+            "seed_request_payload": "00"
+        }
+    },
+    "EPAS3S": {
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_epas3sRequest",
+        "response_message_name": "EPAS3S_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "EPAS3S_APP": {
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_epas3sRequest",
+        "response_message_name": "EPAS3S_udsResponse",
+        "security": {
+            "algorithm": "mando_hash",
+            "buffer_size": 16,
+            "seed_request_payload": "00"
+        }
+    },
+    "EPBL": {
+        "boot_message_name": "EPBL_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "EPB3.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_epblRequest",
+        "response_message_name": "EPBL_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "EPBR": {
+        "boot_message_name": "EPBR_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "EPB3.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_epbrRequest",
+        "response_message_name": "EPBR_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "ESP": {
+        "boot_message_name": "ESP_bootID",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "ESP_custom.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_espRequest",
+        "response_message_name": "ESP_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "HVBMS": {
+        "boot_message_name": "BMS_bootID",
+        "ecu_backup_task": "Gen3/tasks/PROC_HVC_X_ECU-REPLACEMENT-PERIODIC-BACKUP",
+        "minimum_power_state": "CONDITIONING",
+        "odj_sources": [
+            "HVBMS.odj",
+            "UDSBoot_HVC.odj",
+            "HVBMS_custom.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_bmsRequest",
+        "response_message_name": "BMS_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "HVP": {
+        "boot_message_name": "HVP_bootID",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "HVP.odj",
+            "UDSBoot_HVC.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_hvpRequest",
+        "response_message_name": "HVP_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "IBST": {
+        "boot_message_name": "IBST_bootID",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "IBST_custom.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_ibstRequest",
+        "response_message_name": "IBST_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "ICR": {
+        "boot_message_name": "ICR_bootID",
+        "odj_sources": [
+            "COMMON_custom.odj",
+            "ICR.odj"
+        ],
+        "request_message_name": "UDS_icrRequest",
+        "response_message_name": "ICR_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "OCS1P": {
+        "boot_message_name": "OCS1P_bootID",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "OCS1P.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_ocs1pRequest",
+        "response_message_name": "OCS1P_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "PARK": {
+        "boot_message_name": "PARK_bootID",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "PARK.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_parkRequest",
+        "response_message_name": "PARK_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "PCS": {
+        "boot_message_name": "PCS_bootID",
+        "data_upload": "legacy_tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "PCS.odj",
+            "COMMON_custom.odj",
+            "PCS2.odj"
+        ],
+        "request_message_name": "UDS_pcsRequest",
+        "response_message_name": "PCS_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "PMF": {
+        "boot_message_name": "PMF_bootID",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "PM.odj",
+            "c2000_configurable.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_pmfRequest",
+        "response_message_name": "PMF_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "PMR": {
+        "boot_message_name": "PMR_bootID",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "PM.odj",
+            "c2000_configurable.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_pmrRequest",
+        "response_message_name": "PMR_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "PTC": {
+        "boot_message_name": "PTC_bootID",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_ptcRequest",
+        "response_message_name": "PTC_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "RADC": {
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "RADC.odj",
+            "RADC_custom.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_radcRequest",
+        "response_message_name": "RADC_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "RCM": {
+        "boot_message_name": "RCM_bootID",
+        "data_upload": "tesla_protocol_v2",
+        "data_upload_limit": 40,
+        "data_upload_limit_dev": 40,
+        "data_upload_meta_version": 2.2,
+        "force_auto_data_upload": true,
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "RCM2_custom.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_rcmRequest",
+        "response_message_name": "RCM_udsResponse",
+        "security": {
+            "algorithm": "pektron_hash",
+            "buffer_size": 3,
+            "kw": {
+                "fixed_bytes": "6E6164616D"
+            }
+        }
+    },
+    "SCCM": {
+        "boot_message_name": "SCCM_bootID",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_sccmRequest",
+        "response_message_name": "SCCM_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "SDCR": {
+        "boot_message_name": "SDCR_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "SDC.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_sdcrRequest",
+        "response_message_name": "SDCR_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "TAS": {
+        "boot_message_name": "TAS_bootID",
+        "odj_sources": [
+            "TAS.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_tasRequest",
+        "response_message_name": "TAS_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "TPMS": {
+        "boot_message_name": "TPMS_bootID",
+        "minimum_power_state": "ACCESSORY_PLUS",
+        "odj_sources": [
+            "TPMS.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_tpmsRequest",
+        "response_message_name": "TPMS_udsResponse",
+        "security": {
+            "algorithm": "baolong_hash",
+            "buffer_size": 2
+        }
+    },
+    "TRCM": {
+        "boot_message_name": "RCM_bootID",
+        "data_upload": "tesla_protocol",
+        "data_upload_limit": 40,
+        "data_upload_limit_dev": 40,
+        "force_auto_data_upload": true,
+        "odj_sources": [
+            "TRCM.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_rcmRequest",
+        "response_message_name": "RCM_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "USM-VIPER": {
+        "boot_message_name": "PARK_bootID",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "USM.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_parkRequest",
+        "response_message_name": "PARK_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "VCFRONT": {
+        "boot_message_name": "VCFRONT_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "VC_COMMON.odj",
+            "VCFRONT.odj",
+            "VC_LV_BATTERY.odj",
+            "VC_LOUVERCONTROLLER.odj",
+            "THERMAL_CONTROLLER.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_vcfrontRequest",
+        "response_message_name": "VCFRONT_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "VCLEFT": {
+        "boot_message_name": "VCLEFT_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "VCLEFT.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_vcleftRequest",
+        "response_message_name": "VCLEFT_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "VCRIGHT": {
+        "boot_message_name": "VCRIGHT_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "VCRIGHT.odj",
+            "HVAC_CONTROLLER.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_vcrightRequest",
+        "response_message_name": "VCRIGHT_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    },
+    "VCSEC": {
+        "boot_message_name": "VCSEC_bootID",
+        "data_upload": "tesla_protocol",
+        "minimum_power_state": "ACCESSORY",
+        "odj_sources": [
+            "VCSEC.odj",
+            "COMMON_custom.odj"
+        ],
+        "request_message_name": "UDS_vcsecRequest",
+        "response_message_name": "VCSEC_udsResponse",
+        "security": {
+            "algorithm": "tesla_hash",
+            "buffer_size": 16
+        }
+    }
+}

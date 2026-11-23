@@ -1,0 +1,874 @@
+{
+  "coverage": {
+    "keys_decoded": 181,
+    "keys_total": 185,
+    "values_decoded": 499,
+    "values_total": 519
+  },
+  "firmware": "2026.26.6.5",
+  "model": "ModelY",
+  "options": {
+    "activeHighBeam": [
+      "ACTIVE",
+      "NOT_ACTIVE"
+    ],
+    "airSuspension": [
+      "NONE"
+    ],
+    "airbagCutoffSwitch": [
+      "CUTOFF_SWITCH_DISABLED",
+      "CUTOFF_SWITCH_ENABLED"
+    ],
+    "alcoholInterlockType": [
+      "NONE",
+      "TYPE_1"
+    ],
+    "altCmdKey": [],
+    "altCodeKey": [],
+    "audioType": [
+      "BASE",
+      "BASE_WITH_PREMIUM200",
+      "PREMIUM"
+    ],
+    "authenticationEndpointLayout": [
+      "LAYOUT_1"
+    ],
+    "autopilot": [
+      "BASIC",
+      "ENHANCED",
+      "HIGHWAY",
+      "NONE",
+      "SELF_DRIVING"
+    ],
+    "autopilotCameraType": [
+      "RCCB_CAMERAS",
+      "RGGB_CAMERAS"
+    ],
+    "autopilotExteriorCameraType": [
+      "DEFAULT_FOR_APHW"
+    ],
+    "autopilotFeaturePackage": [],
+    "autopilotSubscription": [],
+    "autopilotTrial": [],
+    "autopilotTrialExpireTime": [
+      "EXPIRED",
+      "INACTIVE"
+    ],
+    "auxParkLamps": [
+      "EU",
+      "NA_BASE",
+      "NA_PREMIUM",
+      "NONE"
+    ],
+    "bPillarNFCParam": [
+      "MODEL_3",
+      "MODEL_Y"
+    ],
+    "badgingVersion": [
+      "VERSION_0",
+      "VERSION_1",
+      "VERSION_2"
+    ],
+    "birthday": [],
+    "bleEndpointUpdateMethod": [],
+    "blindSpotIndicatorLightType": [
+      "NOT_INSTALLED"
+    ],
+    "blowerMotorType": [
+      "DELTA"
+    ],
+    "bmpWatchdogDisabled": [
+      "DISABLED",
+      "ENABLED"
+    ],
+    "bmsSubusageId": [],
+    "brakeActuationType": [
+      "ESP_IBST"
+    ],
+    "brakeHWType": [
+      "BREMBO_LARGE_P42_BREMBO_44MOC",
+      "BREMBO_LARGE_P42_BREMBO_LARGE_44MOC",
+      "BREMBO_LARGE_P42_MANDO_43MOC",
+      "BREMBO_LARGE_P42_V2_BREMBO_44MOC",
+      "BREMBO_LARGE_P42_V2_BREMBO_44MOC_GA",
+      "BREMBO_LARGE_P42_V2_BREMBO_LARGE_44MOC",
+      "BREMBO_LARGE_P42_V2_MANDO_43MOC",
+      "BREMBO_LARGE_P42_V2_MANDO_43MOC_LOW_DRAG",
+      "BREMBO_P42LD_V2_MANDO_43MOC",
+      "BREMBO_P42LD_ZF_43MOC",
+      "BREMBO_P42_MANDO_43MOC",
+      "BREMBO_P42_V2_MANDO_43MOC",
+      "BREMBO_P42_ZF_43MOC",
+      "HITACHI_P42_V2_MANDO_43MOC",
+      "HITACHI_P42_V2_MANDO_43MOC_LOW_DRAG"
+    ],
+    "brakeLineSwitchType": [
+      "DI_VC_SHARED",
+      "VC_ONLY"
+    ],
+    "cabinPTCHeaterType": [
+      "BORGWARNER",
+      "NONE"
+    ],
+    "caliperColorType": [
+      "GREY",
+      "RED",
+      "UNKNOWN"
+    ],
+    "carcomputer_pn": [],
+    "carcomputer_sn": [],
+    "centerConsoleControllerType": [
+      "NONE"
+    ],
+    "chassisSubType": [
+      "BASE",
+      "PERFORMANCE",
+      "UNKNOWN"
+    ],
+    "chassisType": [
+      "MODEL_3_CHASSIS",
+      "MODEL_Y_CHASSIS",
+      "MODEL_Y_LONG_WHEELBASE_CHASSIS_PATRONUS"
+    ],
+    "compressorType": [
+      "DENSO_11K_COP1_ENABLED",
+      "DENSO_41CC_11K",
+      "DENSO_41CC_8K",
+      "HANON_33CC",
+      "SANDEN",
+      "SANDEN_V1_1",
+      "SANDEN_V2",
+      "SANDEN_V3",
+      "SANDEN_V4",
+      "SANDEN_V4_1"
+    ],
+    "connectivityPackage": [
+      "BASE",
+      "PREMIUM"
+    ],
+    "coolantPumpType": [
+      "DUAL",
+      "DUAL_MIX",
+      "DUAL_SAN_P4",
+      "DUAL_SAN_P4_LUB",
+      "SINGLE_PUMP_BATT"
+    ],
+    "country": [],
+    "dasHw": [
+      "PARKER_PASCAL_2_5",
+      "TESLA_AP3",
+      "TESLA_AP4"
+    ],
+    "deliveryStatus": [
+      "DELIVERED",
+      "NOT_DELIVERED"
+    ],
+    "devSecurityLevel": [
+      "LC_FACTORY",
+      "LC_GATED"
+    ],
+    "diBurnInType": [
+      "ENABLED_V1",
+      "NONE"
+    ],
+    "driveInterfaceType": [
+      "COMBINED",
+      "EXTERNAL"
+    ],
+    "drivetrainType": [
+      "AWD",
+      "RWD"
+    ],
+    "eBuckConfig": [
+      "DEV_BUCK",
+      "NONE"
+    ],
+    "eCallAntennaHW": [
+      "BACKUP_OR_MAIN_ANT",
+      "MAIN_ANT_ONLY"
+    ],
+    "eCallEnabled": [
+      "DISABLED",
+      "ENABLED_OHC_SOS",
+      "ENABLED_UI_SOS"
+    ],
+    "ecuMapVersion": [
+      "BASE_VERSION"
+    ],
+    "edrCocOverrideDate": [],
+    "edrOptionCodes": [],
+    "efficiencyPackage": [
+      "DEFAULT",
+      "MY_2020",
+      "MY_2021",
+      "MY_2023_GFSH_EXPORT_NA",
+      "MY_2023_SR_RWD",
+      "MY_2024",
+      "MY_2024C",
+      "MY_2024_GFSH_EXPORT_NA_SR_RWD",
+      "MY_2025_CN_PLUS",
+      "MY_2026_M53",
+      "MY_2026_US",
+      "MY_REFRESH_2025_CN_ALL_US_LR_RWD",
+      "MY_REFRESH_2025_ROW",
+      "MY_RWD_EU_2022",
+      "MY_SR_PLUS_2021_Q3_GFSH",
+      "MY_SR_PLUS_2022_Q1_TX",
+      "MY_STANDARD_2026"
+    ],
+    "efuseSWConfig": [
+      "ALL_ENABLED",
+      "DISABLED",
+      "ROUND_ENABLED",
+      "SQUARE_ENABLED"
+    ],
+    "epasSubType": [
+      "GEN3_OR_NA",
+      "GEN4"
+    ],
+    "epasType": [
+      "MANDO_VGR69_GEN3",
+      "MANDO_VGR69_GEN3_SINGLE_ECU",
+      "THYSSENKRUPP_VGR69"
+    ],
+    "epblHwType": [
+      "BREMBO_V1",
+      "BREMBO_V2",
+      "MANDO_V1",
+      "MANDO_V2",
+      "NOT_SET",
+      "ZF"
+    ],
+    "epbrHwType": [
+      "BREMBO_V1",
+      "BREMBO_V2",
+      "MANDO_V1",
+      "MANDO_V2",
+      "NOT_SET",
+      "ZF"
+    ],
+    "espValveType": [
+      "UNKNOWN",
+      "VALVE_TYPE_1",
+      "VALVE_TYPE_2"
+    ],
+    "ethernetTunerType": [
+      "HARMAN",
+      "HARMAN_GEN3",
+      "HIRSCHMANN",
+      "NONE"
+    ],
+    "exteriorColor": [
+      "ABYSS_BLUE",
+      "DEEP_BLUE",
+      "MIDNIGHT_CHERRY_RED",
+      "MIDNIGHT_SILVER",
+      "PEARL_WHITE",
+      "QUICKSILVER",
+      "RED_MULTICOAT",
+      "SILVER_METALLIC",
+      "SOLID_BLACK",
+      "STEALTH_GREY",
+      "ULTRA_RED"
+    ],
+    "exteriorTrimType": [
+      "SATIN_BLACK",
+      "STANDARD_CHROME"
+    ],
+    "fasciaType": [
+      "ORIGINAL"
+    ],
+    "forwardRadarHw": [
+      "CONTI_ARS410",
+      "NONE"
+    ],
+    "frontControllerArchitectureType": [
+      "ALPHA_TYPE",
+      "BETA_TYPE"
+    ],
+    "frontFasciaCameraType": [
+      "NONE"
+    ],
+    "frontFogLamps": [
+      "INSTALLED",
+      "NOT_INSTALLED"
+    ],
+    "frontOverheadConsoleType": [
+      "VALEO"
+    ],
+    "frontSeatHeaterType": [
+      "GENTHERM",
+      "KONGSBERG"
+    ],
+    "frontSeatHeaters": [
+      "KONGSBERG_LOW_POWER",
+      "NONE"
+    ],
+    "frontSeatHeatersEnabled": [
+      "DISABLED",
+      "ENABLED"
+    ],
+    "frontSeatReclinerHardware": [
+      "LEFT_RIGHT_SEAT_REDUCED_RANGE",
+      "LEFT_SEAT_REDUCED_RANGE",
+      "RIGHT_SEAT_REDUCED_RANGE",
+      "STANDARD_RANGE"
+    ],
+    "frontSeatType": [
+      "BASE_TESLA",
+      "PREMIUM_BROSE",
+      "PREMIUM_L_TESLA_MINITILT_R_TESLA",
+      "PREMIUM_L_TESLA_MINITILT_R_TESLA_MINITILT",
+      "PREMIUM_L_TESLA_MINITILT_R_YANFENG_MINITILT",
+      "PREMIUM_L_TESLA_R_TESLA_MINITILT",
+      "PREMIUM_L_TESLA_R_YANFENG",
+      "PREMIUM_L_YANFENG_MINITILT_R_TESLA_MINITILT",
+      "PREMIUM_L_YANFENG_MINITILT_R_YANFENG",
+      "PREMIUM_L_YANFENG_MINITILT_R_YANFENG_MINITILT",
+      "PREMIUM_L_YANFENG_R_TESLA",
+      "PREMIUM_L_YANFENG_R_YANFENG_MINITILT",
+      "PREMIUM_TESLA",
+      "PREMIUM_YANFENG"
+    ],
+    "frontSeatVentilationType": [
+      "NONE",
+      "TYPE_1"
+    ],
+    "frontUsbHubType": [
+      "USB_2",
+      "USB_NO_DATA"
+    ],
+    "gatewayApplicationConfig": [],
+    "glareShieldHeaterType": [
+      "NONE"
+    ],
+    "gloveboxActuatorType": [
+      "SMA",
+      "SOLENOID"
+    ],
+    "gloveboxUSBType": [
+      "NOT_INSTALLED",
+      "TSC_USB3_A"
+    ],
+    "gnssAntennaType": [
+      "GEN2_NO_METAL_INSERT",
+      "GEN2_WITH_METAL_INSERT",
+      "NA_OR_GEN1"
+    ],
+    "gsrFeatureType": [
+      "NONE"
+    ],
+    "headlamps": [
+      "GLOBAL",
+      "PREMIUM"
+    ],
+    "headlightLevelerType": [
+      "GEN1",
+      "NONE",
+      "VIRTUAL_PITCH_SENSOR"
+    ],
+    "headlightStepperStallDetectMode": [
+      "DISABLED",
+      "ENABLED"
+    ],
+    "headlinerMaterialType": [
+      "POLYCARBONATE_ABS"
+    ],
+    "homelinkType": [
+      "HOMELINK_V_OPT_2",
+      "NONE"
+    ],
+    "homologationRegionOverride": [
+      "DEFAULT_FOR_COUNTRY_CODE",
+      "KR_UNECE",
+      "MX_UNECE"
+    ],
+    "hornType": [
+      "EXT_SPEAKER_V2",
+      "TRUMPET"
+    ],
+    "hvacPanelVaneType": [
+      "CONVERGENT_V1",
+      "PARALLEL_V1"
+    ],
+    "immersiveAudio": [
+      "BASE",
+      "DISABLED",
+      "PREMIUM"
+    ],
+    "infotainmentpcba_pn": [],
+    "infotainmentpcba_sn": [],
+    "intakeAirFilterType": [
+      "HEPA",
+      "STANDARD"
+    ],
+    "interiorCabinRadarType": [
+      "NONE",
+      "TESLA"
+    ],
+    "interiorCamBeautyCoverType": [
+      "PITCHED_DOWN",
+      "PITCHED_UP",
+      "STANDARD"
+    ],
+    "interiorCamFanType": [
+      "DELTA_FDB",
+      "NIDEC",
+      "NONE"
+    ],
+    "interiorCameraType": [],
+    "interiorLighting": [
+      "BASE",
+      "PREMIUM",
+      "PREMIUM_NO_POCKET_LIGHT",
+      "PREMIUM_WITH_RGB",
+      "PREMIUM_WITH_RGB_IP_ONLY"
+    ],
+    "interiorTrimType": [
+      "BLACK",
+      "BLACK_CONSOLE_2",
+      "WHITE",
+      "WHITE_CONSOLE_2"
+    ],
+    "interiorUpperTrimType": [
+      "MAMMOTH_BLACK",
+      "POLAR_GREY"
+    ],
+    "intrusionSensorType": [
+      "NOT_INSTALLED",
+      "VODAFONE"
+    ],
+    "logLevel": [
+      "MINIMAL",
+      "VERBOSE"
+    ],
+    "lumbarECUType": [
+      "AEW",
+      "AEW_DRIVER_ONLY_LHD",
+      "AEW_DRIVER_ONLY_RHD",
+      "ALFMEIER",
+      "ALFMEIER_DRIVER_ONLY_LHD",
+      "ALFMEIER_DRIVER_ONLY_RHD",
+      "NONE"
+    ],
+    "m3yBusArchitecture": [
+      "PRIVATE_TORQUE",
+      "PRIVATE_TORQUE_CHASSIS",
+      "PUBLIC_TORQUE"
+    ],
+    "mRecordVersion": [
+      "VER_2016_OR_NA"
+    ],
+    "mapRegion": [
+      "AU",
+      "CN",
+      "EU",
+      "HK",
+      "IN",
+      "JP",
+      "KR",
+      "LA",
+      "ME",
+      "MO",
+      "NONE",
+      "SE",
+      "TW",
+      "US"
+    ],
+    "mcuBootData": [],
+    "memoryMirrors": [
+      "NOT_INSTALLED",
+      "SMR"
+    ],
+    "narrowWipingSupported": [
+      "NOT_SUPPORTED",
+      "SUPPORTED"
+    ],
+    "numberHVILNodes": [
+      "HVIL_NODES_0",
+      "HVIL_NODES_2",
+      "HVIL_NODES_3"
+    ],
+    "occupancyClassificationFeatureType": [
+      "DISCRETE_SENSOR_OR_NA",
+      "TESLA_CABIN_RADAR"
+    ],
+    "occupancyDetectionSourceRequest": [
+      "DISCRETE_SENSOR_OR_NA",
+      "TESLA_CABIN_RADAR"
+    ],
+    "packEnergy": [
+      "LR",
+      "MR",
+      "SR"
+    ],
+    "packPerformanceDeviation": [
+      "NO_DEVIATION",
+      "PACK_MASS_DEVIATION_1",
+      "PACK_MASS_DEVIATION_2",
+      "PACK_POWER_DEVIATION_1",
+      "PACK_POWER_DEVIATION_2",
+      "PACK_STRUCTURAL_DEVIATION_1"
+    ],
+    "parkAssistECUType": [
+      "NONE",
+      "TESLA",
+      "VALEO"
+    ],
+    "parkTelltaleBehaviorType": [
+      "LEGACY_BEHAVIOR",
+      "TYPE_1_REVISED_BEHAVIOR"
+    ],
+    "passengerAirbagType": [
+      "EUROW",
+      "FULL_SUPPRESSION",
+      "SAFETY_VENT"
+    ],
+    "passengerOccupancySensorType": [
+      "OCS",
+      "RESISTIVE_PAD"
+    ],
+    "pedalMapNameOverride": [
+      "CHILL_STANDARD",
+      "NO_OVERRIDE"
+    ],
+    "pedestrianWarningSound": [
+      "EXT_SPEAKER_V2",
+      "NONE",
+      "SPEAKER"
+    ],
+    "performancePackage": [
+      "BASE",
+      "BASE_2022",
+      "BASE_2024",
+      "BASE_PLUS",
+      "PERFORMANCE"
+    ],
+    "plcSupportType": [
+      "NATIVE_CHARGE_PORT",
+      "NONE",
+      "ONBOARD_ADAPTER"
+    ],
+    "powerLiftgateType": [
+      "NOT_INSTALLED",
+      "TESLA_REV1"
+    ],
+    "powerMirrorFoldType": [
+      "TYPE_1"
+    ],
+    "powerSteeringColumn": [
+      "NOT_INSTALLED",
+      "TK"
+    ],
+    "prodCmdKey": [],
+    "prodCodeKey": [],
+    "r79BehaviorOverride": [
+      "NO_OVERRIDE",
+      "R79_ENABLED"
+    ],
+    "radarHeaterType": [
+      "NONE"
+    ],
+    "rcmLocation": [
+      "CENTER_CONSOLE"
+    ],
+    "rcmUndersideAbuseWindow": [
+      "window0",
+      "window1",
+      "window2",
+      "window3"
+    ],
+    "rcmUndersideAbuseYThreshold": [
+      "threshold0",
+      "threshold1",
+      "threshold2",
+      "threshold3",
+      "threshold4",
+      "threshold5",
+      "threshold6",
+      "threshold7"
+    ],
+    "rcmUndersideAbuseZThreshold": [
+      "threshold0",
+      "threshold1",
+      "threshold2",
+      "threshold3",
+      "threshold4",
+      "threshold5",
+      "threshold6",
+      "threshold7"
+    ],
+    "rduCableType": [
+      "ALUMINUM",
+      "COPPER"
+    ],
+    "rearFogLamps": [
+      "INSTALLED",
+      "NOT_INSTALLED"
+    ],
+    "rearLightType": [
+      "EU_CN",
+      "GLOBAL",
+      "NA"
+    ],
+    "rearSeatHeaterType": [
+      "THREE_SEATS_KONGSBERG"
+    ],
+    "rearSeatHeaters": [
+      "KONGSBERG_LOW_POWER",
+      "NONE"
+    ],
+    "refrigACLineType": [
+      "CONTI_LIMITED",
+      "SAAA_LIMITED",
+      "UNLIMITED"
+    ],
+    "refrigFilterType": [
+      "BLOCKED_V1",
+      "BLOCKED_V2",
+      "UNBLOCKED"
+    ],
+    "refrigLccType": [
+      "LCC",
+      "LCCR"
+    ],
+    "refrigerantType": [
+      "Default",
+      "R1234YF",
+      "R134A"
+    ],
+    "repeaterAeroRibType": [
+      "OPTIMIZED",
+      "RETROFIT_OPTIMIZED",
+      "UNOPTIMIZED"
+    ],
+    "restraintControlsType": [
+      "BOSCH",
+      "TESLA"
+    ],
+    "restraintsHardwareType": [
+      "EUROW_ECALL_1_STG_DAB_MY",
+      "EUROW_ECALL_FSAB_1_STG_DAB_MY",
+      "EUROW_ECALL_M3",
+      "EUROW_ECALL_M3_OH",
+      "EUROW_ECALL_MY",
+      "EUROW_NO_ECALL_1_STG_DAB_MY",
+      "EUROW_NO_ECALL_FSAB_1_STAG_DAB_MY",
+      "EUROW_NO_ECALL_M3",
+      "EUROW_NO_ECALL_MY",
+      "EUROW_SP_ECALL_MY",
+      "EUROW_SP_NO_ECALL_FSAB_1_STAG_DAB_MY",
+      "NA_FSAB_MY",
+      "NA_M3",
+      "NA_M3_OH",
+      "NA_MY",
+      "NA_SP_FSAB_MY",
+      "NA_SP_MY",
+      "ROW_NO_ECALL_M3_OH",
+      "ROW_NO_ECALL_M3_OH_PED_PRO"
+    ],
+    "rgbInteriorLightingEnabled": [
+      "ALL_COLORS",
+      "DISABLED_OR_NA"
+    ],
+    "rightHandDrive": [
+      "LEFT",
+      "RIGHT"
+    ],
+    "roofGlassType": [
+      "TSA3_PET",
+      "TSA5_NOPET"
+    ],
+    "roofType": [
+      "FIXED_GLASS"
+    ],
+    "secondRowSeatType": [
+      "FLAT_FOLD"
+    ],
+    "securityVersion": [],
+    "shifterType": [
+      "STALK"
+    ],
+    "socSleepOverride": [
+      "FORCE_S3",
+      "FORCE_SHALLOW",
+      "PN_DERIVED"
+    ],
+    "softPerformanceLimit": [
+      "LIMIT_160_KW",
+      "NONE"
+    ],
+    "softRange": [
+      "RANGE_220_MILES",
+      "RANGE_260_MILES",
+      "RANGE_343_MILES",
+      "RANGE_93_MILES",
+      "STANDARD"
+    ],
+    "sohRegulatoryStatus": [
+      "NON_REGULATED_SOH",
+      "REGULATED_SOH"
+    ],
+    "specialBadgingType": [
+      "NONE"
+    ],
+    "spoilerType": [
+      "NOT_INSTALLED",
+      "PASSIVE"
+    ],
+    "steeringColumnMotorType": [
+      "BOSCH",
+      "BOSCH_COMMON_TO_JE",
+      "JE"
+    ],
+    "steeringColumnUJointType": [
+      "C_SAMPLE_PHASING"
+    ],
+    "steeringHeaterEnabled": [
+      "DISABLED",
+      "ENABLED"
+    ],
+    "steeringHeaterType": [
+      "NONE"
+    ],
+    "steeringWheelControllerType": [
+      "SINGLE"
+    ],
+    "superManifoldType": [
+      "TYPE0",
+      "TYPE1",
+      "TYPE2"
+    ],
+    "superchargingAccess": [
+      "ALLOWED",
+      "NOT_ALLOWED",
+      "PAY_AS_YOU_GO"
+    ],
+    "thirdRowSeatType": [
+      "FLAT_FOLD",
+      "NONE"
+    ],
+    "tireType": [
+      "BRIDGESTONE_ALL_SEASON_20",
+      "BRIDGESTONE_SUMMER_18",
+      "CONTI_ALL_SEASON_19",
+      "CONTI_ALL_SEASON_20",
+      "CONTI_SUMMER_19",
+      "CONTI_SUMMER_22",
+      "GITI_SUMMER_18",
+      "GOODYEAR_ALL_SEASON_18",
+      "GOODYEAR_ALL_SEASON_20",
+      "GOODYEAR_ALL_SEASON_21",
+      "GOODYEAR_ALL_TERRAIN_20",
+      "GOODYEAR_SUMMER_19",
+      "HANKOOK_ALL_SEASON_18",
+      "HANKOOK_ALL_SEASON_20",
+      "HANKOOK_ALL_SEASON_21",
+      "HANKOOK_SUMMER_18",
+      "HANKOOK_SUMMER_19",
+      "KUMHO_ALL_SEASON_18",
+      "KUMHO_ALL_SEASON_19",
+      "MICHELIN_ALL_SEASON_18",
+      "MICHELIN_ALL_SEASON_21",
+      "MICHELIN_SUMMER_18",
+      "MICHELIN_SUMMER_20",
+      "MICHELIN_SUMMER_21",
+      "PIRELLI_ALL_SEASON_19",
+      "PIRELLI_ALL_SEASON_20",
+      "PIRELLI_ALL_SEASON_22",
+      "PIRELLI_SUMMER_19",
+      "PIRELLI_SUMMER_20",
+      "PIRELLI_SUMMER_21",
+      "UNKNOWN"
+    ],
+    "towPackage": [
+      "NONE",
+      "TESLA_REV1",
+      "TESLA_REV2"
+    ],
+    "tpmsType": [
+      "TESLA_BLE"
+    ],
+    "twelveVBatteryType": [
+      "ATLASBX_B24_FLOODED",
+      "CATL_LI_ION",
+      "CLARIOS_B24_FLOODED",
+      "TESLA_16V_LI_ION"
+    ],
+    "v2xEnabled": [
+      "DISABLED",
+      "ENABLED"
+    ],
+    "vdcType": [
+      "BOSCH_VDC",
+      "TESLA_VDC"
+    ],
+    "vin": [],
+    "visorLightType": [
+      "NON_DIMMABLE"
+    ],
+    "wheelType": [
+      "APOLLO_19_METALLIC_SHADOW",
+      "APOLLO_19_SILVER",
+      "APOLLO_19_SILVER_CAP_KIT",
+      "INDUCTION_20_BLACK",
+      "UBERTURBINE_21_BLACK"
+    ],
+    "wholeVehicleTypeApproval": [],
+    "windowCommandsPermissionType": [
+      "ROW_OR_US_FMVSS_S5",
+      "US_FMVSS_S4",
+      "US_FMVSS_S6"
+    ],
+    "windshieldWiperHeaterEnabled": [
+      "DISABLED",
+      "ENABLED_OR_NA"
+    ],
+    "windshieldWiperHeaterType": [
+      "NOT_INSTALLED",
+      "TYPE_1"
+    ],
+    "wiperMotorAsicType": [
+      "TYPE_1",
+      "TYPE_2",
+      "UNKNOWN_OR_NA"
+    ],
+    "wiperMotorType": [
+      "NOT_UPDATEABLE",
+      "SHB"
+    ],
+    "wiperSupplyChainOrigin": [
+      "CN_SUPPLY_CHAIN",
+      "NA_SUPPLY_CHAIN",
+      "UNKNOWN_OR_SNA"
+    ],
+    "wirelessPhoneChargerType": [
+      "FRONT_LIN",
+      "NONE_OR_USB"
+    ]
+  },
+  "salt": "qth1bzewgp77ah4tr87nf9w6q0cwmf8c",
+  "undecoded": {
+    "key_hashes": [
+      "74b583f4d46db7e837777a770167adfc11097e4be1ef9fa986b4a37391d4e318",
+      "b2287bb6053622e6baa45bd3de7e38304a54ec1aac2fa4a2b1eacf27ae6cdd6e",
+      "bcbefae73aa9a59741f9cca7440ab0040903f44f1e7a78c8fec7a24c0afd6c3d",
+      "d9635029faa0bc3a6b77514ce92d1314d5bc633fcb6207e8ac26868882204bf9"
+    ],
+    "value_hashes": {
+      "autopilotFeaturePackage": 2,
+      "bcbefae73aa9a59741f9cca7440ab0040903f44f1e7a78c8fec7a24c0afd6c3d": 1,
+      "bleEndpointUpdateMethod": 1,
+      "efficiencyPackage": 2,
+      "epasType": 2,
+      "frontOverheadConsoleType": 1,
+      "gsrFeatureType": 1,
+      "interiorCameraType": 3,
+      "logLevel": 1,
+      "radarHeaterType": 1,
+      "rcmLocation": 1,
+      "secondRowSeatType": 1,
+      "steeringHeaterType": 3
+    }
+  }
+}
