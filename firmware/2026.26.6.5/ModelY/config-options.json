@@ -2,7 +2,7 @@
   "coverage": {
     "keys_decoded": 181,
     "keys_total": 185,
-    "values_decoded": 499,
+    "values_decoded": 503,
     "values_total": 519
   },
   "firmware": "2026.26.6.5",
@@ -206,6 +206,7 @@
       "MY_2024",
       "MY_2024C",
       "MY_2024_GFSH_EXPORT_NA_SR_RWD",
+      "MY_2025",
       "MY_2025_CN_PLUS",
       "MY_2026_M53",
       "MY_2026_US",
@@ -227,6 +228,8 @@
       "GEN4"
     ],
     "epasType": [
+      "MANDO_CGR69",
+      "MANDO_CGR69_SINGLE_ECU",
       "MANDO_VGR69_GEN3",
       "MANDO_VGR69_GEN3_SINGLE_ECU",
       "THYSSENKRUPP_VGR69"
@@ -567,6 +570,7 @@
       "R79_ENABLED"
     ],
     "radarHeaterType": [
+      "MODELY_BACKER_THIN_3M",
       "NONE"
     ],
     "rcmLocation": [
@@ -859,13 +863,11 @@
       "autopilotFeaturePackage": 2,
       "bcbefae73aa9a59741f9cca7440ab0040903f44f1e7a78c8fec7a24c0afd6c3d": 1,
       "bleEndpointUpdateMethod": 1,
-      "efficiencyPackage": 2,
-      "epasType": 2,
+      "efficiencyPackage": 1,
       "frontOverheadConsoleType": 1,
       "gsrFeatureType": 1,
       "interiorCameraType": 3,
       "logLevel": 1,
-      "radarHeaterType": 1,
       "rcmLocation": 1,
       "secondRowSeatType": 1,
       "steeringHeaterType": 3

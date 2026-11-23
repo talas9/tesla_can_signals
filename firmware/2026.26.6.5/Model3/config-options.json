@@ -2,7 +2,7 @@
   "coverage": {
     "keys_decoded": 174,
     "keys_total": 178,
-    "values_decoded": 471,
+    "values_decoded": 481,
     "values_total": 496
   },
   "firmware": "2026.26.6.5",
@@ -198,7 +198,16 @@
     "edrCocOverrideDate": [],
     "edrOptionCodes": [],
     "efficiencyPackage": [
-      "DEFAULT"
+      "DEFAULT",
+      "M3_2021",
+      "M3_2023_GFSH_EXPORT_NA",
+      "M3_2026B",
+      "M3_2026_M53",
+      "M3_LR_2020",
+      "M3_LR_PERFORMANCE_2020",
+      "M3_SR_PLUS_2020",
+      "M3_SR_PLUS_2020_Q4_GFSH",
+      "M3_SR_PLUS_2021_Q3_GFSH"
     ],
     "efuseSWConfig": [
       "ALL_ENABLED",
@@ -532,6 +541,7 @@
       "R79_ENABLED"
     ],
     "radarHeaterType": [
+      "MODELY_BACKER_THIN_3M",
       "NONE"
     ],
     "rcmLocation": [
@@ -818,12 +828,11 @@
       "autopilotFeaturePackage": 2,
       "bleEndpointUpdateMethod": 1,
       "blowerMotorType": 1,
-      "efficiencyPackage": 10,
+      "efficiencyPackage": 1,
       "frontOverheadConsoleType": 1,
       "gsrFeatureType": 1,
       "interiorCameraType": 3,
       "logLevel": 1,
-      "radarHeaterType": 1,
       "steeringHeaterType": 3
     }
   }

@@ -2,7 +2,7 @@
   "coverage": {
     "keys_decoded": 158,
     "keys_total": 159,
-    "values_decoded": 437,
+    "values_decoded": 442,
     "values_total": 455
   },
   "firmware": "2025.20.8",
@@ -200,6 +200,7 @@
       "MY_2024",
       "MY_2024C",
       "MY_2024_GFSH_EXPORT_NA_SR_RWD",
+      "MY_2025",
       "MY_REFRESH_2025_CN_ALL_US_LR_RWD",
       "MY_REFRESH_2025_ROW",
       "MY_RWD_EU_2022",
@@ -213,6 +214,8 @@
       "SQUARE_ENABLED"
     ],
     "epasType": [
+      "MANDO_CGR69",
+      "MANDO_CGR69_SINGLE_ECU",
       "MANDO_VGR69_GEN3",
       "MANDO_VGR69_GEN3_SINGLE_ECU",
       "THYSSENKRUPP_VGR69"
@@ -513,6 +516,7 @@
       "R79_ENABLED"
     ],
     "radarHeaterType": [
+      "MODELY_BACKER_THIN_3M",
       "NONE"
     ],
     "rcmLocation": [
@@ -629,6 +633,7 @@
       "JE"
     ],
     "steeringColumnUJointType": [
+      "B_SAMPLE_PHASING",
       "C_SAMPLE_PHASING"
     ],
     "steeringHeaterEnabled": [
@@ -748,15 +753,12 @@
     "value_hashes": {
       "372585b0ef53fd702434abde8958705d025531a1024ec0c2496b1101bde83a50": 1,
       "bleEndpointUpdateMethod": 1,
-      "efficiencyPackage": 3,
-      "epasType": 2,
+      "efficiencyPackage": 2,
       "frontOverheadConsoleType": 1,
       "interiorCameraType": 2,
       "logLevel": 1,
-      "radarHeaterType": 1,
       "rcmLocation": 1,
       "secondRowSeatType": 1,
-      "steeringColumnUJointType": 1,
       "steeringHeaterType": 3
     }
   }
